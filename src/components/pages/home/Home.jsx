@@ -5,6 +5,7 @@ import AboutUs from "../../AboutUs/AboutUs";
 import ReachSupport from "../../ReachSupport/ReachSupport";
 import ScrollAnimation from "react-animate-on-scroll";
 import PlatformWorks from "../../PlatformWorks/PlatformWorks";
+import WhyUs from "../../WhyUs/WhyUs";
 import "./Home.scss";
 
 const Home = () => {
@@ -17,7 +18,12 @@ const Home = () => {
       <ScrollAnimation animateIn="fadeIn">
         <AboutUs />
       </ScrollAnimation>
-      <PlatformWorks />
+      <ScrollAnimation animateIn="fadeIn">
+        <PlatformWorks />
+      </ScrollAnimation>
+      <ScrollAnimation animateIn="fadeIn">
+        <WhyUs />
+      </ScrollAnimation>
       <ScrollAnimation animateIn="fadeIn">
         <ReachSupport />
       </ScrollAnimation>

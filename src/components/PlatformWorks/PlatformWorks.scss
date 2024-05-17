@@ -4,7 +4,7 @@
   font-family: "Manrope", sans-serif;
   margin-top: 100px;
   .platform-section-content {
-    max-width: 1367px;
+    max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -14,7 +14,7 @@
       flex-direction: row;
       width: 100%;
       .steps-image{
-        width: 100%;
+        width: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -43,7 +43,7 @@
             bottom: 0;
             width: 2px;
             z-index: -1;
-            height: 350px;
+            height: 380px;
             background: repeating-linear-gradient(
               to bottom,
               $cambridge-green 0%,
