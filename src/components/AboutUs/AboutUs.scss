@@ -18,7 +18,7 @@
   }
   .about-us-section-container {
     width: 100%;
-    max-width: 1367px;
+    max-width: $max-screen-width;
     margin: 0 auto;
   }
   .about-us-section-content {
@@ -52,7 +52,7 @@
         border-radius: 12px;
         gap: 8px;
         height: 60px;
-        width: 280px;
+        width: 320px;
         transition: 0.2s all;
         cursor: pointer;
         &:hover {

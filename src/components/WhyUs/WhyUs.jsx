@@ -1,34 +1,31 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./WhyUs.scss";
 
 const WhyUs = () => {
+  const { t } = useTranslation("home");
+
   return (
     <div className="why-us-section">
       <div className="why-us-content">
         <div className="why-us-image"></div>
         <div className="why-us-text">
-          <h3>WHY CHOOSE US</h3>
-          <h2>The Right Care for you</h2>
-          <p>
-            Hello Abu stands out as the premier platform for elderly care,
-            specifically designed to cater to the unique healthcare needs of
-            grandparents. By integrating cutting-edge technology with a
-            compassionate approach, Hello Abu ensures that seniors receive the
-            best possible care from the comfort of their homes.
-          </p>
+          <h3 dangerouslySetInnerHTML={{ __html: t("WhyUs.Title") }}></h3>
+          <h2 dangerouslySetInnerHTML={{ __html: t("WhyUs.SubTitle") }}></h2>
+          <p dangerouslySetInnerHTML={{ __html: t("WhyUs.Description") }}></p>
           <div className="why-us-values">
-            <div className="why-us-value">
-              <span>Logo</span>
-              <b>Quality Support</b>
-            </div>
-            <div className="why-us-value">
-              <span>Logo</span>
-              <b>Elder Care</b>
-            </div>
-            <div className="why-us-value">
-              <span>Logo</span>
-              <b>Caring Staff</b>
-            </div>
+            <div
+              className="why-us-value"
+              dangerouslySetInnerHTML={{ __html: t("WhyUs.QualitySupport") }}
+            ></div>
+            <div
+              className="why-us-value"
+              dangerouslySetInnerHTML={{ __html: t("WhyUs.ElderCare") }}
+            ></div>
+            <div
+              className="why-us-value"
+              dangerouslySetInnerHTML={{ __html: t("WhyUs.CaringStaff") }}
+            ></div>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@
   font-family: "Manrope", sans-serif;
   margin-top: 100px;
   .platform-section-content {
-    max-width: 1000px;
+    max-width: $max-screen-width;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -43,7 +43,7 @@
             bottom: 0;
             width: 2px;
             z-index: -1;
-            height: 380px;
+            height: 350px;
             background: repeating-linear-gradient(
               to bottom,
               $cambridge-green 0%,
@@ -85,6 +85,8 @@
       width: 780px;
       h2 {
         font-size: 3rem;
+        margin-block-start: 0;
+        margin-block-end: 15px;
         color: $neutral-font-color;
         font-weight: 600;
         span {
@@ -95,6 +97,7 @@
         font-size: 1.1rem;
         font-weight: 500;
         color: $light-font-color;
+        margin-bottom: 50px;
       }
     }
   }

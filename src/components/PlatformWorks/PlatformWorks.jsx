@@ -1,51 +1,45 @@
 import React from "react";
 import nurse from "../../assets/images/doctor.png";
+import { useTranslation } from "react-i18next";
 import "./PlatformWorks.scss";
 
 const PlatformWorks = () => {
+  const { t } = useTranslation("home");
+
   return (
     <div className="platform-section">
       <div className="platform-section-content">
         <div className="platform-text">
-          <h2>
-            How <span>our platform</span> works
-          </h2>
-          <p>
-            Your healthcare journey with Hello Abu is smooth and
-            straightforward. Simply follow the steps outlined below to access
-            your chosen services. For additional information, please consult our
-            FAQ section.
-          </p>
+          <h2
+            dangerouslySetInnerHTML={{ __html: t("PlatformWorks.Title") }}
+          ></h2>
+          <p>{t("PlatformWorks.Description")}</p>
         </div>
         <div className="platform-steps">
           <ul className="platform-steps-list">
             <li>
-              <h3>
-                <span>1</span> Create Your Profile
-              </h3>
-              <p>
-                Register and securely enter your information. By setting up your
-                profile in this manner, you'll keep current with your processes.
-              </p>
+              <h3
+                dangerouslySetInnerHTML={{
+                  __html: t("PlatformWorks.Step1Title"),
+                }}
+              ></h3>
+              <p>{t("PlatformWorks.Step1Description")}</p>
             </li>
             <li>
-              <h3>
-                <span>2</span> Choose Your Service
-              </h3>
-              <p>
-                Choose from our array of services and schedule a consultation.
-                Arranging a consultation with Hello Abu is quite simple and
-                direct.
-              </p>
+              <h3
+                dangerouslySetInnerHTML={{
+                  __html: t("PlatformWorks.Step2Title"),
+                }}
+              ></h3>
+              <p>{t("PlatformWorks.Step2Description")}</p>
             </li>
             <li>
-              <h3>
-                <span>3</span> Meet Your Helper
-              </h3>
-              <p>
-                Engage in a virtual consultation with one of our certified
-                specialists.
-              </p>
+              <h3
+                dangerouslySetInnerHTML={{
+                  __html: t("PlatformWorks.Step3Title"),
+                }}
+              ></h3>
+              <p>{t("PlatformWorks.Step3Description")}</p>
             </li>
             <span className="steps-line" />
           </ul>

@@ -1,0 +1,72 @@
+{
+    "WelcomeSection": {
+      "Title": "Empowering your health at every step",
+      "Description": "Experience personalized medical care from the comfort of your home. Connect with <span>certified helpers</span> with ease.",
+      "BookButton": "Book an Appointment >"
+    },
+    "BookAppointment": {
+      "Title": "Easily book an appointment in 3 simple steps.",
+      "EmailLabel": "Email Address",
+      "EmailPlaceholder": "Enter your email",
+      "ContactLabel": "Contact Number",
+      "ContactPlaceholder": "Enter your contact number",
+      "DateLabel": "Date of Appointment",
+      "DatePlaceholder": "Select Date of Appointment",
+      "BookNowButton": "Book Now"
+    },
+    "HomeServices": {
+      "Title": "Top <span>services</span> we offer",
+      "Description": "In today’s fast-paced world, your health deserves the utmost attention and convenience. That’s why Hello Abu offers a suite of integrated services designed to cater to your healthcare needs digitally:",
+      "OnlineConsultTitle": "Online Consultations",
+      "BookingTitle": "Book Appointments",
+      "OnlineConsultations": "Consult with top doctors across various specialties via video or chat communication. It’s totally secure, private, and convenient. Choose the best time for an in-person visit with our easy-to-use scheduling system, or proceed with our online consultation.",
+      "BookAppointments": "Choose the best time for a call with our easy-to-use scheduling system, or proceed with our online consultation features."
+    },
+    "AboutUs": {
+        "Title": "<span>Hello Abu Story:</span> Get to know us",
+        "Description": "Hello Abu transcends the typical online medical service by embodying a movement aimed at delivering accessible, efficient, and compassionate healthcare for abus. Our platform rests on trust, innovation, and a focus on the patient, ensuring each interaction is tailored to individual needs. Featuring a wide network of licensed professionals across various medical specialties, we provide thorough care that is easily accessible with just a click",
+        "LearnMoreButton": "Learn more about us"
+    },
+    "PlatformWorks": {
+        "Title": "How <span>our platform</span> works",
+        "Description": "Your healthcare journey with Hello Abu is smooth and straightforward. Simply follow the steps outlined below to access your chosen services. For additional information, please consult our FAQ section.",
+        "Step1Title": "<span>1</span> Create Your Profile",
+        "Step1Description": "Register and securely enter your information. By setting up your profile in this manner, you'll keep current with your processes.",
+        "Step2Title": "<span>2</span> Choose Your Service",
+        "Step2Description": "Choose from our array of services and schedule a consultation. Arranging a consultation with Hello Abu is quite simple and direct.",
+        "Step3Title": "<span>3</span> Meet Your Helper",
+        "Step3Description": "Engage in a virtual consultation with one of our certified specialists."
+    },
+    "WhyUs": {
+        "Title": "WHY CHOOSE US",
+        "SubTitle": "The Right Care for you",
+        "Description": "Hello Abu stands out as the premier platform for elderly care, specifically designed to cater to the unique healthcare needs of grandparents. By integrating cutting-edge technology with a compassionate approach, Hello Abu ensures that seniors receive the best possible care from the comfort of their homes.",
+        "QualitySupport": "<span>Logo</span> Quality Support",
+        "ElderCare": "<span>Logo</span> Elder Care",
+        "CaringStaff": "<span>Logo</span> Caring Staff"
+    },
+    "ReachSupport": {
+      "Title": "Reach for support",
+      "Description": "Questions? Need assistance? Our dedicated support team is here to help you every step of the way:",
+      "FirstNamePlaceholder": "Enter Your First Name",
+      "EmailPlaceholder": "Enter Your Email Address",
+      "ContactButton": "Contact us"
+    },
+    "Footer": {
+      "SupportTitle": "Support",
+      "GettingStarted": "Getting Started",
+      "FAQ": "FAQ",
+      "ReportIssue": "Report an Issue",
+      "ContactHelpDesk": "Contact Help Desk",
+      "ServicesTitle": "Services",
+      "BookingAppointments": "Booking Appointments",
+      "OnlineConsultations": "Online Consultations",
+      "LegalTitle": "Legal",
+      "TermsConditions": "Terms and Conditions",
+      "PrivacyPolicy": "Privacy Policy",
+      "TrustCenter": "Trust Center",
+      "SocialMedia": "social media",
+      "Rights": "Hello Abu 2024 © All Rights Reserved"
+    }
+}
+  

@@ -1,18 +1,22 @@
 import React from "react";
 import BookAppointment from "../BookAppointment/BookAppointment";
+import { useTranslation } from "react-i18next";
 import "./WelcomeSection.scss";
 
 const WelcomeSection = () => {
+  const { t } = useTranslation("home");
+
   return (
     <div className="welcome-container">
       <div className="welcome-section">
         <div className="welcome-content">
-          <h1>Empowering your health at every step</h1>
-          <p>
-            Experience personalized medical care from the comfort of your home.
-            Connect with <span>certified helpers</span> with ease.
-          </p>
-          <button>Book an Appointment {">"}</button>
+          <h1>{t("WelcomeSection.Title")}</h1>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t("WelcomeSection.Description"),
+            }}
+          />
+          <button>{t("WelcomeSection.BookButton")}</button>
         </div>
       </div>
       <div className="welcome-booking">

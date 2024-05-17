@@ -1,0 +1,72 @@
+{
+    "WelcomeSection": {
+      "Title": "Potenciando tu salud en cada paso",
+      "Description": "Experimenta atención médica personalizada desde la comodidad de tu hogar. Conecta con <span>ayuda certificada</span> fácilmente.",
+      "BookButton": "Reserva una Cita >"
+    },
+    "BookAppointment": {
+      "Title": "Reserva fácilmente una cita en 3 simples pasos.",
+      "EmailLabel": "Dirección de Correo",
+      "EmailPlaceholder": "Ingresa tu correo",
+      "ContactLabel": "Número de Contacto",
+      "ContactPlaceholder": "Ingresa tu número de contacto",
+      "DateLabel": "Fecha de la Cita",
+      "DatePlaceholder": "Selecciona la fecha de la cita",
+      "BookNowButton": "Reservar Ahora"
+    },
+    "HomeServices": {
+        "Title": "Principales <span>servicios</span> que ofrecemos",
+        "Description": "En el mundo acelerado de hoy, tu salud merece la máxima atención y comodidad. Por eso, Hello Abu ofrece un conjunto de servicios integrados diseñados para atender tus necesidades de salud de manera digital:",
+        "OnlineConsultTitle": "Consultas en Línea",
+        "BookingTitle": "Reserva de Citas",
+        "OnlineConsultations": "Consulta con los mejores doctores de diversas especialidades a través de comunicación por video o chat. Es totalmente seguro, privado y conveniente. Elige el mejor momento para una visita presencial con nuestro sistema de programación fácil de usar, o procede con nuestra consulta en línea.",
+        "BookAppointments": "Elige el mejor momento para una llamada con nuestro sistema de programación fácil de usar, o procede con las características de nuestra consulta en línea."
+    },
+    "AboutUs": {
+        "Title": "<span>Historia de Hello Abu:</span> Conócenos",
+        "Description": "Hello Abu trasciende el servicio médico en línea típico al encarnar un movimiento dirigido a ofrecer atención médica accesible, eficiente y compasiva para los abus. Nuestra plataforma se basa en la confianza, la innovación y un enfoque en el paciente, asegurando que cada interacción esté personalizada a las necesidades individuales. Con una amplia red de profesionales licenciados en diversas especialidades médicas, proporcionamos atención completa que es fácilmente accesible con solo un clic",
+        "LearnMoreButton": "Aprende más sobre nosotros"
+    },
+    "PlatformWorks": {
+        "Title": "Cómo <span>funciona nuestra plataforma</span>",
+        "Description": "Tu viaje de atención médica con Hello Abu es suave y directo. Simplemente sigue los pasos que se detallan a continuación para acceder a tus servicios elegidos. Para información adicional, por favor consulta nuestra sección de preguntas frecuentes.",
+        "Step1Title": "<span>1</span> Crea tu Perfil",
+        "Step1Description": "Regístrate e ingresa tu información de manera segura. Al configurar tu perfil de esta manera, te mantendrás actualizado con tus procesos.",
+        "Step2Title": "<span>2</span> Elige tu Servicio",
+        "Step2Description": "Elige de nuestro catálogo de servicios y programa una consulta. Organizar una consulta con Hello Abu es bastante simple y directo.",
+        "Step3Title": "<span>3</span> Conoce a tu Asistente",
+        "Step3Description": "Participa en una consulta virtual con uno de nuestros especialistas certificados."
+    },
+    "WhyUs": {
+        "Title": "POR QUÉ ELEGIRNOS",
+        "SubTitle": "El cuidado adecuado para ti",
+        "Description": "Hello Abu se destaca como la plataforma principal para el cuidado de ancianos, diseñada específicamente para atender las necesidades de salud únicas de los abuelos. Al integrar tecnología de vanguardia con un enfoque compasivo, Hello Abu garantiza que los mayores reciban la mejor atención posible desde la comodidad de sus hogares.",
+        "QualitySupport": "<span>Logo</span> Apoyo de Calidad",
+        "ElderCare": "<span>Logo</span> Cuidado para Ancianos",
+        "CaringStaff": "<span>Logo</span> Personal Atento"
+    },
+    "ReachSupport": {
+        "Title": "Solicita apoyo",
+        "Description": "¿Preguntas? ¿Necesitas asistencia? Nuestro equipo de soporte dedicado está aquí para ayudarte en cada paso:",
+        "FirstNamePlaceholder": "Ingresa tu Nombre",
+        "EmailPlaceholder": "Ingresa tu Dirección de Correo",
+        "ContactButton": "Contáctanos"
+    },
+    "Footer": {
+        "SupportTitle": "Soporte",
+        "GettingStarted": "Primeros Pasos",
+        "FAQ": "Preguntas Frecuentes",
+        "ReportIssue": "Reportar un Problema",
+        "ContactHelpDesk": "Contactar Mesa de Ayuda",
+        "ServicesTitle": "Servicios",
+        "BookingAppointments": "Reservas de Citas",
+        "OnlineConsultations": "Consultas Online",
+        "LegalTitle": "Legal",
+        "TermsConditions": "Términos y Condiciones",
+        "PrivacyPolicy": "Política de Privacidad",
+        "TrustCenter": "Centro de Confianza",
+        "SocialMedia": "redes sociales",
+        "Rights": "Hello Abu 2024 © Todos los Derechos Reservados"
+    }
+}
+  

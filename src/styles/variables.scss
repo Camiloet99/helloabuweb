@@ -25,6 +25,7 @@ $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
+$max-screen-width: 1367px;
 
 @mixin respond-to($breakpoint) {
   @if $breakpoint == sm {
