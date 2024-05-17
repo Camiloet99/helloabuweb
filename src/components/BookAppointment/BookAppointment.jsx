@@ -3,9 +3,9 @@ import "./BookAppointment.scss"; // Asegúrate de tener este archivo CSS
 
 function BookAppointment() {
   return (
-    <div className="card">
+    <div className="appointment-card">
       <h2>Easily book an appointment in 3 simple steps.</h2>
-      <form className="card-form">
+      <form className="appointment-card-form">
         <div className="input-content">
           <label htmlFor="email">Email Address</label>
           <input id="email" type="email" placeholder="Enter your email" />
@@ -20,11 +20,17 @@ function BookAppointment() {
         </div>
         <div className="input-content">
           <label htmlFor="date">Date of Appointment</label>
-          <input id="date" type="date" />
+          <input
+            id="date"
+            type="date"
+            placeholder="Select Date of Appointment"
+          />
         </div>
         <div className="input-content">
           <label htmlFor="">d</label>
-          <button type="submit">Book Now</button>
+          <button type="submit" className="bookNow">
+            Book Now
+          </button>
         </div>
       </form>
     </div>

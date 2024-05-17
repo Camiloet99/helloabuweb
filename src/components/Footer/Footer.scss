@@ -1,0 +1,78 @@
+@import "../../styles/styles.scss";
+
+.footer {
+  .footer-container {
+    text-align: left;
+    padding: 30px;
+    max-width: 1367px;
+    margin: 0 auto;
+  }
+  font-family: "Manrope", sans-serif;
+  color: $neutral-font-color;
+  font-size: 1rem;
+  background-color: $soft-green-background;
+  font-weight: 440;
+  .cut-line {
+    background-color: $cambridge-green;
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 40px;
+    height: 2px;
+  }
+  .footer-content {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    .footer-logo {
+      width: 282px;
+      margin-left: 30px;
+      height: auto;
+    }
+    .footer-sections {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      .footer-section {
+        h4 {
+          font-weight: 550;
+          margin-bottom: 20px;
+          color: $cambridge-green;
+        }
+        ul {
+          list-style: none;
+          padding: 0;
+
+          li {
+            margin-bottom: 15px;
+            cursor: pointer;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-socials {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    span {
+      color: $light-font-color;
+      font-size: 1rem;
+    }
+    img {
+      margin-right: 10px;
+      width: 24px; // Ajusta según el tamaño de los íconos
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

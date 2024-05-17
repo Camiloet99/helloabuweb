@@ -1,0 +1,42 @@
+@import "../../styles/styles.scss";
+
+.home-services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  font-family: "Manrope", sans-serif;
+  margin-top: 180px;
+  .home-services-container {
+    width: 100%;
+    max-width: 1367px;
+  }
+
+  .home-services-title {
+    font-size: 3rem;
+    color: $neutral-font-color;
+    font-weight: 700;
+    span {
+      color: $cambridge-green;
+    }
+  }
+
+  .home-services-description {
+    margin: 0 auto;
+    margin-block-start: 0;
+    width: 680px;
+    color: $light-font-color;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+  }
+
+  .home-services-cards-container {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
