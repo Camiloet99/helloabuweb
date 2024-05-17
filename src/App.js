@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/helloabuweb" element={<Home />} />
       </Routes>
       <Footer />
     </div>
