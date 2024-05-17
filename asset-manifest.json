@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/helloabuweb/static/css/main.d1578fba.css",
-    "main.js": "/helloabuweb/static/js/main.8d3a1b3a.js",
+    "main.css": "/helloabuweb/static/css/main.be57c188.css",
+    "main.js": "/helloabuweb/static/js/main.70d8b947.js",
     "static/js/453.3aab4d9e.chunk.js": "/helloabuweb/static/js/453.3aab4d9e.chunk.js",
     "static/media/abu2.jpg": "/helloabuweb/static/media/abu2.9fe76fa62eca46a7be8b.jpg",
     "static/media/doctor.png": "/helloabuweb/static/media/doctor.4b27e7a05ba45ba93b6d.png",
@@ -14,12 +14,13 @@
     "static/media/logo.png": "/helloabuweb/static/media/logo.1a09836aca64ae0ad146.png",
     "static/media/logovertical.png": "/helloabuweb/static/media/logovertical.0f6ea8bacaa8389ffd13.png",
     "index.html": "/helloabuweb/index.html",
-    "main.d1578fba.css.map": "/helloabuweb/static/css/main.d1578fba.css.map",
-    "main.8d3a1b3a.js.map": "/helloabuweb/static/js/main.8d3a1b3a.js.map",
+    "static/media/getFetch.cjs": "/helloabuweb/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
+    "main.be57c188.css.map": "/helloabuweb/static/css/main.be57c188.css.map",
+    "main.70d8b947.js.map": "/helloabuweb/static/js/main.70d8b947.js.map",
     "453.3aab4d9e.chunk.js.map": "/helloabuweb/static/js/453.3aab4d9e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1578fba.css",
-    "static/js/main.8d3a1b3a.js"
+    "static/css/main.be57c188.css",
+    "static/js/main.70d8b947.js"
   ]
 }
