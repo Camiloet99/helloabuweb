@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/helloabuweb/static/css/main.9866a627.css",
+    "main.js": "/helloabuweb/static/js/main.05a8031a.js",
+    "static/js/453.3aab4d9e.chunk.js": "/helloabuweb/static/js/453.3aab4d9e.chunk.js",
+    "static/media/herobackground.jpeg": "/helloabuweb/static/media/herobackground.7c08956ce1efc00b1b64.jpeg",
+    "static/media/Manrope-Bold.woff2": "/helloabuweb/static/media/Manrope-Bold.29881e5d43ff99584f9c.woff2",
+    "static/media/Manrope-Regular.woff2": "/helloabuweb/static/media/Manrope-Regular.2e6d3d21cb34c92a8f7a.woff2",
+    "static/media/Manrope-Medium.woff2": "/helloabuweb/static/media/Manrope-Medium.0b33f41eb1974d58060a.woff2",
+    "static/media/logo.png": "/helloabuweb/static/media/logo.1a09836aca64ae0ad146.png",
+    "index.html": "/helloabuweb/index.html",
+    "main.9866a627.css.map": "/helloabuweb/static/css/main.9866a627.css.map",
+    "main.05a8031a.js.map": "/helloabuweb/static/js/main.05a8031a.js.map",
+    "453.3aab4d9e.chunk.js.map": "/helloabuweb/static/js/453.3aab4d9e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9866a627.css",
+    "static/js/main.05a8031a.js"
+  ]
+}
