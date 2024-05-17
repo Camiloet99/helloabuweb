@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.scss";
-import logo from "../../assets/images/logo.png"; // Asegúrate de que la ruta sea correcta
+import logo from "../../assets/images/logo.png"; 
 
 function Header() {
   return (

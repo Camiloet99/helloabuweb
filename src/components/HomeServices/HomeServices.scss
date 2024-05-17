@@ -1,0 +1,36 @@
+@import "../../styles/styles.scss";
+
+.home-services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+  font-family: "Manrope", sans-serif;
+
+  .title {
+    font-size: 3rem;
+    color: $neutral-font-color;
+    font-weight: 700;
+    span {
+      color: $cambridge-green;
+    }
+  }
+
+  .description {
+    margin-block-start: 0;
+    width: 700px;
+    color: $light-font-color;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+  }
+
+  .cards-container {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}

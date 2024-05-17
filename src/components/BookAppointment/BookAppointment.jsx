@@ -20,11 +20,17 @@ function BookAppointment() {
         </div>
         <div className="input-content">
           <label htmlFor="date">Date of Appointment</label>
-          <input id="date" type="date" />
+          <input
+            id="date"
+            type="date"
+            placeholder="Select Date of Appointment"
+          />
         </div>
         <div className="input-content">
           <label htmlFor="">d</label>
-          <button type="submit">Book Now</button>
+          <button type="submit" className="bookNow">
+            Book Now
+          </button>
         </div>
       </form>
     </div>
