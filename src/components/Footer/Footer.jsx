@@ -10,7 +10,9 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-content">
-          <img src={logo} alt="Logo" className="footer-logo" />
+          <div className="footer-logo">
+            <img src={logo} alt="Logo" className="footer-logo" />
+          </div>
           <div className="footer-sections">
             <div className="footer-section">
               <h4>Support</h4>
@@ -18,6 +20,7 @@ const Footer = () => {
                 <li>Getting Started</li>
                 <li>FAQ</li>
                 <li>Report an Issue</li>
+                <li>Contact Help Desk</li>
               </ul>
             </div>
             <div className="footer-section">
@@ -32,6 +35,7 @@ const Footer = () => {
               <ul>
                 <li>Terms and Conditions</li>
                 <li>Privacy Policy</li>
+                <li>Trust Center</li>
               </ul>
             </div>
           </div>
