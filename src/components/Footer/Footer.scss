@@ -1,13 +1,17 @@
 @import "../../styles/styles.scss";
 
 .footer {
-  padding: 30px;
-  background-color: $soft-green-background;
+  .footer-container {
+    text-align: left;
+    padding: 30px;
+    max-width: 1367px;
+    margin: 0 auto;
+  }
   font-family: "Manrope", sans-serif;
   color: $neutral-font-color;
   font-size: 1rem;
+  background-color: $soft-green-background;
   font-weight: 440;
-  text-align: left;
   .cut-line {
     background-color: $cambridge-green;
     display: block;
@@ -51,17 +55,15 @@
       }
     }
   }
-
   .footer-socials {
     width: 95%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-    span{
+    span {
       color: $light-font-color;
       font-size: 1rem;
-    
     }
     img {
       margin-right: 10px;

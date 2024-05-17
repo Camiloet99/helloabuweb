@@ -1,45 +1,45 @@
 @import "../../styles/styles.scss";
 
-.card {
+.appointment-card {
   font-family: "Manrope", sans-serif;
-  width: 70%;
-  margin: 0 auto;
   padding: 40px;
   box-shadow: 3.12px 9.37px 21.85px 0px #0000003d;
   border-radius: 28px;
   background: $tea-green;
   display: flex;
   flex-direction: column;
-  transform: translateY(-20%);
   h2 {
     text-align: left;
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 40px;
     font-weight: 700;
     color: $dark-green-title;
     margin-block-start: 0;
     margin-block-end: 0;
   }
-
-  .card-form {
+  .appointment-card-form {
     margin-top: 50px;
     display: flex;
     flex-direction: row;
-    gap: 10px; // Espacio entre los elementos del formulario
+    justify-content: space-evenly;
+    gap: 10px;
 
     .input-content {
       display: flex;
       flex-direction: column;
       label {
         text-align: left;
-        font-size: 16px;
-        font-weight: 500;
+        font-size: 1rem;
+        font-weight: 600;
         line-height: 24px;
-        color: #888888;
+        color: #6e6e6e;
+      }
+      input {
+        width: 220px;
       }
       input,
       button {
-        margin-top: 16px;
+        margin-top: 1rem;
         border-radius: 12px;
         border: 1px solid #e7e7e78c;
         padding: 18px;
@@ -47,8 +47,8 @@
       input,
       ::-webkit-input-placeholder {
         font-weight: 500;
-        font-size: 16px;
-        color: #dddddd;
+        font-size: 1.05rem;
+        color: #999999;
       }
     }
 
@@ -57,10 +57,12 @@
       color: white;
       border: none;
       border-radius: 12px;
-      font-size: 18px;
+      font-size: 1.1rem;
       font-weight: 700;
+      transition: 0.2s all;
+      cursor: pointer;
       &:hover {
-        background-color: darken(#007bff, 10%);
+        background-color: $strong-green-button;
       }
     }
   }

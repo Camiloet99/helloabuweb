@@ -1,12 +1,18 @@
 @import "../../styles/styles.scss";
 
 .reach-support-section {
-  display: flex;
   text-align: center;
-  flex-direction: column;
   font-family: "Manrope", sans-serif;
   color: $neutral-font-color;
-  align-items: center;
+  margin-bottom: 200px;
+  .reach-support-section-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1367px;
+    margin: 0 auto;
+  }
   h1 {
     margin-top: 140px;
     font-size: 2.5rem;
@@ -16,7 +22,7 @@
     margin-block-end: 10px;
     color: $light-font-color;
     width: 450px;
-    font-size: 1.04rem;
+    font-size: 1.08rem;
   }
 
   form {
@@ -39,19 +45,24 @@
     input,
     ::-webkit-input-placeholder {
       font-weight: 500;
-      font-size: .9rem;
-      color: #B0B0B0;
+      font-size: 0.9rem;
+      color: #b0b0b0;
     }
-    button{
-        background-color: $cambridge-green;
-        height: 52px;
-        width: 180px;
-        border: none;
-        border-radius: 12px;
-        font-weight: 500;
-        font-size: 1.5rem;
-        color: white;
-        gap: 8px;
+    button {
+      background-color: $cambridge-green;
+      height: 52px;
+      width: 180px;
+      border: none;
+      border-radius: 12px;
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: white;
+      gap: 8px;
+      cursor: pointer;
+      transition: 0.2s all;
+      &:hover {
+        background-color: $strong-green-button;
+      }
     }
   }
 }

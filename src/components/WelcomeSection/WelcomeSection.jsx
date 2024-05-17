@@ -1,12 +1,12 @@
 import React from "react";
 import BookAppointment from "../BookAppointment/BookAppointment";
-import "./HeroSection.scss";
+import "./WelcomeSection.scss";
 
-function HeroSection() {
+const WelcomeSection = () => {
   return (
-    <div className="hero-container">
-      <div className="hero-section">
-        <div className="hero-content">
+    <div className="welcome-container">
+      <div className="welcome-section">
+        <div className="welcome-content">
           <h1>Empowering your health at every step</h1>
           <p>
             Experience personalized medical care from the comfort of your home.
@@ -15,11 +15,11 @@ function HeroSection() {
           <button>Book an Appointment {">"}</button>
         </div>
       </div>
-      <div className="hero-booking">
+      <div className="welcome-booking">
         <BookAppointment />
       </div>
     </div>
   );
-}
+};
 
-export default HeroSection;
+export default WelcomeSection;
