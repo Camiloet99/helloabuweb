@@ -1,0 +1,43 @@
+// Colores
+$color-primary: #0056b3;
+$color-secondary: #0063cc;
+$color-accent: #ff4081;
+$background-color: #f8f9fa;
+$tea-green: #FBFCF7;
+
+$neutral-font-color: #3D3D3D;
+$soft-font-color: #4F4F4F;
+
+$strong-green-button: #1D352E;
+
+$dark-green-title: #60716C;
+$cambridge-green: #9BAC8A;
+
+// Márgenes
+$margin-standard: 20px;
+
+// Media Queries
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (max-width: $breakpoint-lg) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (max-width: $breakpoint-xl) {
+      @content;
+    }
+  }
+}

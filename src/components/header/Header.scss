@@ -1,0 +1,40 @@
+// src/components/Header.scss
+
+@import "../../styles/styles.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 95px;
+  background-color: $tea-green;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.navigation a {
+  margin: 0 30px;
+  text-decoration: none;
+  color: $neutral-font-color;
+}
+
+.join-us {
+  background-color: $strong-green-button;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 24px;
+  box-shadow: -8px 8px 28px 0px #0000000f;
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 24px;
+  @include respond-to(md) {
+    padding: 8px 16px;
+  }
+}

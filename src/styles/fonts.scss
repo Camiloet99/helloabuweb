@@ -1,0 +1,22 @@
+// src/styles/_fonts.scss
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../assets/fonts/manrope/Manrope-Regular.woff2") format("woff2");
+  font-weight: 400; // Regular
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../assets/fonts/manrope/Manrope-Medium.woff2") format("woff2");
+  font-weight: 500; // Medium
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../assets/fonts/manrope/Manrope-Bold.woff2") format("woff2");
+  font-weight: 700; // Bold
+  font-style: normal;
+}
