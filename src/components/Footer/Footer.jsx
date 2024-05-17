@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.scss";
-import logo from "../../assets/images/logo.png"; 
+import logo from "../../assets/images/logovertical.png";
 //import facebookIcon from "./path-to-facebook-icon.svg";
 //import twitterIcon from "./path-to-twitter-icon.svg";
 //import linkedinIcon from "./path-to-linkedin-icon.svg";
@@ -35,7 +35,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <span className="cut-line" />
       <div className="footer-socials">
+        <div>social media</div>
+        <span>Hello Abu 2024 © All Rights Reserved</span>
       </div>
     </footer>
   );
