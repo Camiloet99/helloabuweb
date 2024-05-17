@@ -9,26 +9,23 @@
   font-family: "Manrope", sans-serif;
   position: relative;
   display: flex;
+  flex-direction: column;
   .welcome-booking {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    bottom: -180px;
     width: 70%;
     max-width: $max-screen-width;
     margin: 0 auto;
+    height: 30%;
   }
   .welcome-section {
     display: flex;
     margin: 0 auto;
     padding-left: 100px;
     width: 100%;
+    height: 70%;
     max-width: $max-screen-width;
     text-align: left;
     .welcome-content {
-      margin-top: 100px;
+      margin-top: 80px;
       width: 470px;
       height: 390px;
       h1 {
