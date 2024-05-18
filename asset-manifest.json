@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/helloabuweb/static/css/main.86fc90bf.css",
+    "main.css": "/helloabuweb/static/css/main.8a8c6139.css",
     "main.js": "/helloabuweb/static/js/main.70d8b947.js",
     "static/js/453.3aab4d9e.chunk.js": "/helloabuweb/static/js/453.3aab4d9e.chunk.js",
     "static/media/abu2.jpg": "/helloabuweb/static/media/abu2.9fe76fa62eca46a7be8b.jpg",
@@ -15,12 +15,12 @@
     "static/media/logovertical.png": "/helloabuweb/static/media/logovertical.0f6ea8bacaa8389ffd13.png",
     "index.html": "/helloabuweb/index.html",
     "static/media/getFetch.cjs": "/helloabuweb/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
-    "main.86fc90bf.css.map": "/helloabuweb/static/css/main.86fc90bf.css.map",
+    "main.8a8c6139.css.map": "/helloabuweb/static/css/main.8a8c6139.css.map",
     "main.70d8b947.js.map": "/helloabuweb/static/js/main.70d8b947.js.map",
     "453.3aab4d9e.chunk.js.map": "/helloabuweb/static/js/453.3aab4d9e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.86fc90bf.css",
+    "static/css/main.8a8c6139.css",
     "static/js/main.70d8b947.js"
   ]
 }
