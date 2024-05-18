@@ -13,13 +13,13 @@
       display: flex;
       flex-direction: row;
       width: 100%;
-      .steps-image{
+      .steps-image {
         width: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        img{
-            width: 80%;
+        img {
+          width: 80%;
         }
       }
       .platform-steps-list {
@@ -98,6 +98,57 @@
         font-weight: 500;
         color: $light-font-color;
         margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+@include respond-to(md) {
+  .platform-section {
+    margin-top: 50px;
+    .platform-section-content {
+      width: auto;
+      margin: 30px;
+      .platform-text {
+        width: auto;
+        h2 {
+          font-size: 2rem;
+          margin-block-end: 5px;
+        }
+        p{
+          margin-bottom: 20px;
+        }
+      }
+      .platform-steps {
+        width: auto;
+        flex-direction: column;
+        .steps-image {
+          display: none;
+        }
+        .platform-steps-list {
+          width: auto;
+          padding-inline-start: 0;
+          h3 {
+            font-size: 1.5rem;
+            span {
+              margin-right: 5px;
+              font-size: 1.5rem;
+              width: 40px;
+              height: 40px;
+            }
+          }
+          p {
+            margin: 20px;
+            margin-top: 10px;
+          }
+          li:first-child {
+            position: relative;
+            &::before {
+              content: "";
+              background: none;
+            }
+          }
+        }
       }
     }
   }

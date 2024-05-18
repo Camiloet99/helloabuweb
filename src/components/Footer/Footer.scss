@@ -78,4 +78,22 @@
       }
     }
   }
+
+  @include respond-to(md) {
+    .footer-container {
+      .footer-content {
+        flex-direction: column;
+      }
+      .footer-logo {
+        img {
+          width: 200px;
+          margin-left: 0;
+        }
+      }
+      .footer-sections {
+        text-align: center;
+        gap: 10px;
+      }
+    }
+  }
 }

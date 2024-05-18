@@ -37,9 +37,35 @@
       color: $neutral-font-color;
       width: 450px;
       line-height: 1.5rem;
-      font-size: .95rem;
+      font-size: 0.95rem;
       margin-block-end: 0;
       font-weight: 500;
+    }
+  }
+}
+
+@include respond-to(md) {
+  .service-card {
+    width: auto;
+    height: auto;
+    .service-container {
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+      }
+    }
+    .service-info {
+      position: static;
+      transform: translateY(0);
+      display: block;
+      border: 0;
+      padding: 20px;
+      p {
+        margin-block-start: 0;
+        width: auto;
+        margin-bottom: 20px;
+      }
     }
   }
 }

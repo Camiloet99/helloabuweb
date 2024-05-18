@@ -68,3 +68,22 @@
     }
   }
 }
+
+@include respond-to(md) {
+  .appointment-card {
+    transform: translateY(0);
+    h2 {
+      text-align: center;
+      font-size: 1.4rem;
+      line-height: 1.5rem;
+    }
+    .appointment-card-form {
+      flex-direction: column;
+      .input-content {
+        input{
+          width: auto
+        }
+      }
+    }
+  }
+}

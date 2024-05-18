@@ -64,3 +64,29 @@
     }
   }
 }
+
+@include respond-to(md) {
+  .welcome-container {
+    height: auto;
+    .welcome-section {
+      padding-left: 0;
+      margin: 30px;
+      width: auto;
+      text-align: center;
+      .welcome-content {
+        margin-top: 80px;
+        width: auto;
+        height: auto;
+        h1 {
+          font-size: 3rem;
+        }
+      }
+      
+    }
+    .welcome-booking {
+      width: 90%;
+      margin: 0 auto;
+      height: 30%;
+    }
+  }
+}

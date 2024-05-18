@@ -66,3 +66,31 @@
     }
   }
 }
+
+@include respond-to(md) {
+  .reach-support-section {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: auto;
+    .reach-support-section-container {
+      margin: 30px;
+      width: auto;
+      h1 {
+        font-size: 2rem;
+        margin-top: 20px;
+      }
+      p{
+        width: auto;
+        margin-block-start: 0;
+      }
+      form{
+        width: auto;
+        padding: 30px;
+        height: auto;
+        border-radius: 10px;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  }
+}

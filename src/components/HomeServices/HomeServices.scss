@@ -40,3 +40,19 @@
     width: 100%;
   }
 }
+
+@include respond-to(md) {
+  .home-services {
+    width: auto;
+    margin-top: 20px;
+    margin: 30px;
+    .home-services-description {
+      width: auto;
+    }
+    .home-services-cards-container {
+      margin-top: 20px;
+      height: auto;
+      flex-direction: column;
+    }
+  }
+}

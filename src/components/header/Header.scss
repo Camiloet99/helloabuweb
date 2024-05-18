@@ -46,14 +46,28 @@
     &:hover {
       background-color: $cambridge-green;
     }
-    @include respond-to(md) {
-      padding: 8px 16px;
-    }
   }
 
-  .language-switcher{
+  .language-switcher {
     position: absolute;
     top: 0;
     left: 0;
+  }
+}
+
+@include respond-to(md) {
+  .header {
+    .header-container {
+      margin-top: 10px;
+      padding: 10px;
+    }
+    .header-logo img {
+      height: 50px;
+      width: auto;
+      cursor: pointer;
+    }
+    .header-navigation{
+      display: none;
+    }
   }
 }

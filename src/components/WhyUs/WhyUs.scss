@@ -65,3 +65,27 @@
     }
   }
 }
+
+@include respond-to(md) {
+  .why-us-section {
+    margin-top: 20px;
+    .why-us-content {
+      flex-direction: column;
+      .why-us-text {
+        width: auto;
+        margin: 30px;
+        h3{
+          text-align: center;
+        }
+        h2{
+          font-size: 3rem;
+          line-height: 3rem;
+          text-align: center;
+        }
+        p{
+          text-align: center;
+        }
+      }
+    }
+  }
+}
