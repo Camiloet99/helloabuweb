@@ -65,7 +65,7 @@
   }
 }
 
-@include respond-to(md) {
+@include respond-to(lg) {
   .welcome-container {
     height: auto;
     .welcome-section {

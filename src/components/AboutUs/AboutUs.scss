@@ -63,7 +63,7 @@
   }
 }
 
-@include respond-to(md) {
+@include respond-to(lg) {
   .about-us-section {
     margin-top: 20px;
     h1 {

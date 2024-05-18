@@ -69,7 +69,7 @@
   }
 }
 
-@include respond-to(md) {
+@include respond-to(lg) {
   .appointment-card {
     transform: translateY(0);
     h2 {

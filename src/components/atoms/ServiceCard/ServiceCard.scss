@@ -44,7 +44,7 @@
   }
 }
 
-@include respond-to(md) {
+@include respond-to(lg) {
   .service-card {
     width: auto;
     height: auto;

@@ -103,7 +103,7 @@
   }
 }
 
-@include respond-to(md) {
+@include respond-to(lg) {
   .platform-section {
     margin-top: 50px;
     .platform-section-content {

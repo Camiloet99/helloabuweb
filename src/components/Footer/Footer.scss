@@ -79,7 +79,7 @@
     }
   }
 
-  @include respond-to(md) {
+  @include respond-to(lg) {
     .footer-container {
       .footer-content {
         flex-direction: column;

@@ -41,7 +41,7 @@
   }
 }
 
-@include respond-to(md) {
+@include respond-to(lg) {
   .home-services {
     width: auto;
     margin-top: 20px;

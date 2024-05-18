@@ -55,7 +55,7 @@
   }
 }
 
-@include respond-to(md) {
+@include respond-to(lg) {
   .header {
     .header-container {
       margin-top: 10px;
