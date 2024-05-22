@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next"; // Importamos useTranslation
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo/logohorizontal.svg";
 import "./Header.scss";
 import "./../../i18n";
 

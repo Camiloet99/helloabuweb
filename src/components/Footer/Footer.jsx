@@ -1,10 +1,11 @@
 import React from "react";
-import logo from "../../assets/images/logovertical.png";
+import logo from "../../assets/images/logo/logovertical.svg";
 import { useTranslation } from "react-i18next";
 import "./Footer.scss";
-//import facebookIcon from "./path-to-facebook-icon.svg";
-//import twitterIcon from "./path-to-twitter-icon.svg";
-//import linkedinIcon from "./path-to-linkedin-icon.svg";
+import facebookIcon from "../../assets/images/icons/socialmedia/Facebook.svg";
+import instagramIcon from "../../assets/images/icons/socialmedia/Instagram.svg";
+import linkedinIcon from "../../assets/images/icons/socialmedia/LinkedIn.svg";
+import youtubeIcon from "../../assets/images/icons/socialmedia/Youtube.svg";
 
 const Footer = () => {
   const { t } = useTranslation("home");
@@ -45,7 +46,20 @@ const Footer = () => {
         </div>
         <span className="cut-line" />
         <div className="footer-socials">
-          <div>{t("Footer.SocialMedia")}</div>
+          <div className="social-logos">
+            <a href="" className="social-link">
+              <img src={facebookIcon} alt="Facebook logo" />
+            </a>
+            <a href="" className="social-link">
+              <img src={instagramIcon} alt="Instagram logo" />
+            </a>
+            <a href="" className="social-link">
+              <img src={youtubeIcon} alt="Youtube logo" />
+            </a>
+            <a href="" className="social-link">
+              <img src={linkedinIcon} alt="Linkedin logo" />
+            </a>
+          </div>
           <span>{t("Footer.Rights")}</span>
         </div>
       </div>

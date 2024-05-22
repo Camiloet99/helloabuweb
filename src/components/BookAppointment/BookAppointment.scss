@@ -28,12 +28,17 @@
     .input-content {
       display: flex;
       flex-direction: column;
-      label {
-        text-align: left;
-        font-size: 1rem;
-        font-weight: 600;
-        line-height: 24px;
-        color: #6e6e6e;
+      .label-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        label {
+          text-align: left;
+          font-size: 1rem;
+          font-weight: 600;
+          line-height: 24px;
+          color: #6e6e6e;
+        }
       }
       input {
         width: 220px;
@@ -80,9 +85,17 @@
     .appointment-card-form {
       flex-direction: column;
       .input-content {
-        input{
-          width: auto
+        input {
+          margin-bottom: 16px;
+          width: auto;
         }
+        .label-content{
+          margin-top: 10p;
+          flex-direction: column;
+        }
+      }
+      button {
+        font-size: 0.9rem;
       }
     }
   }

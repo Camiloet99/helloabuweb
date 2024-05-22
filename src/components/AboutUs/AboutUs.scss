@@ -67,8 +67,8 @@
   .about-us-section {
     margin-top: 20px;
     h1 {
-      margin-top: 40px;
       margin-block-end: 5px;
+      margin: 40px 30px 0 30px;
     }
     .about-us-section-content {
       flex-direction: column;
@@ -86,7 +86,6 @@
         button {
           width: auto;
         }
-
       }
     }
   }

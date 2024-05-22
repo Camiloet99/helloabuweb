@@ -1,5 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import email from "../../assets/images/icons/forms/email.svg";
+import phone from "../../assets/images/icons/forms/email.svg";
+import calendar from "../../assets/images/icons/forms/calendar.svg";
 import "./BookAppointment.scss";
 
 const BookAppointment = () => {
@@ -10,7 +13,10 @@ const BookAppointment = () => {
       <h2>{t("BookAppointment.Title")}</h2>
       <form className="appointment-card-form">
         <div className="input-content">
-          <label htmlFor="email">{t("BookAppointment.EmailLabel")}</label>
+          <div className="label-content">
+            <img src={email} alt="email logo" />
+            <label htmlFor="email">{t("BookAppointment.EmailLabel")}</label>
+          </div>
           <input
             id="email"
             type="email"
@@ -18,7 +24,10 @@ const BookAppointment = () => {
           />
         </div>
         <div className="input-content">
-          <label htmlFor="contact">{t("BookAppointment.ContactLabel")}</label>
+          <div className="label-content">
+            <img src={phone} alt="email logo" />
+            <label htmlFor="contact">{t("BookAppointment.ContactLabel")}</label>
+          </div>
           <input
             id="contact"
             type="text"
@@ -26,7 +35,10 @@ const BookAppointment = () => {
           />
         </div>
         <div className="input-content">
-          <label htmlFor="date">{t("BookAppointment.DateLabel")}</label>
+          <div className="label-content">
+            <img src={calendar} alt="email logo" />
+            <label htmlFor="date">{t("BookAppointment.DateLabel")}</label>
+          </div>
           <input
             id="date"
             type="date"

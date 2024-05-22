@@ -82,17 +82,29 @@
   @include respond-to(lg) {
     .footer-container {
       .footer-content {
-        flex-direction: column;
+        flex-direction: column-reverse;
       }
       .footer-logo {
+        margin-left: 0;
+        width: auto;
         img {
           width: 200px;
           margin-left: 0;
         }
       }
       .footer-sections {
+        flex-direction: column;
         text-align: center;
         gap: 10px;
+        margin-bottom: 20px;
+      }
+      .footer-socials{
+        .social-logos{
+          width: 60%;
+        }
+        span{
+          text-align: right;
+        }
       }
     }
   }

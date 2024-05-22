@@ -11,7 +11,7 @@
 
   .service-container {
     position: relative;
-    img {
+    .background-image {
       width: 100%;
       height: 100%;
       border-radius: 35px;
@@ -26,6 +26,24 @@
     text-align: left;
     border-radius: 32px;
     padding: 30px;
+    position: absolute;
+    .service-info-logo {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      background-color: $tea-green;
+      border-radius: 50%;
+      right: 20px;
+      top: 0;
+      transform: translateY(-50%);
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
     h2 {
       font-size: 1.2rem;
       margin-block-start: 0;
@@ -49,7 +67,7 @@
     width: auto;
     height: auto;
     .service-container {
-      img {
+      .background-image {
         width: 100%;
         height: auto;
         border-radius: 15px;

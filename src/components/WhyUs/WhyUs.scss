@@ -2,7 +2,7 @@
 
 .why-us-section {
   margin-top: 100px;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   font-family: "Manrope", sans-serif;
   .why-us-content {
     max-width: $max-screen-width;
@@ -12,9 +12,12 @@
 
     .why-us-image {
       width: 60%;
+      img{
+        width: 70%;
+      }
     }
     .why-us-text {
-      margin-left: 60px;
+      justify-content: center;
       width: 40%;
       text-align: left;
       display: flex;
@@ -71,18 +74,40 @@
     margin-top: 20px;
     .why-us-content {
       flex-direction: column;
+      .why-us-image {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        img {
+          width: 100%;
+        }
+      }
       .why-us-text {
         width: auto;
         margin: 30px;
-        h3{
+        .why-us-values {
+          flex-direction: column;
+          .why-us-value {
+            margin-bottom: 30px;
+            flex-direction: row;
+            align-items: center;
+            gap: 30px;
+            margin-left: 50px;
+            font-weight: bold;
+            span {
+              margin: 0;
+            }
+          }
+        }
+        h3 {
           text-align: center;
         }
-        h2{
+        h2 {
           font-size: 3rem;
           line-height: 3rem;
           text-align: center;
         }
-        p{
+        p {
           text-align: center;
         }
       }

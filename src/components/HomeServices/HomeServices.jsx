@@ -2,6 +2,8 @@ import React from "react";
 import ServiceCard from "../atoms/ServiceCard/ServiceCard";
 import abu1 from "../../assets/images/servicecards/abu1.jpg";
 import abu2 from "../../assets/images/servicecards/abu2.jpg";
+import calendar from "../../assets/images/icons/forms/calendar.svg";
+import camera from "../../assets/images/icons/onlineconsultations.svg";
 import { useTranslation } from "react-i18next";
 import "./HomeServices.scss";
 
@@ -23,11 +25,13 @@ const HomeServices = () => {
         <div className="home-services-cards-container">
           <ServiceCard
             imageSrc={abu1}
+            logo={camera}
             title={t("HomeServices.OnlineConsultTitle")}
             description={t("HomeServices.OnlineConsultations")}
           />
           <ServiceCard
             imageSrc={abu2}
+            logo={calendar}
             title={t("HomeServices.BookingTitle")}
             description={t("HomeServices.BookAppointments")}
           />
