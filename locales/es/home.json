@@ -41,12 +41,14 @@
         "Title": "POR QUÉ ELEGIRNOS",
         "SubTitle": "El cuidado adecuado para ti",
         "Description": "Hello Abu se destaca como la plataforma principal para el cuidado de ancianos, diseñada específicamente para atender las necesidades de salud únicas de los abuelos. Al integrar tecnología de vanguardia con un enfoque compasivo, Hello Abu garantiza que los mayores reciban la mejor atención posible desde la comodidad de sus hogares.",
-        "QualitySupport": "<span>Logo</span> Apoyo de Calidad",
-        "ElderCare": "<span>Logo</span> Cuidado para Ancianos",
-        "CaringStaff": "<span>Logo</span> Personal Atento"
+        "QualitySupport": "Apoyo de Calidad",
+        "ElderCare": "Cuidado para Ancianos",
+        "CaringStaff": "Personal Atento"
     },
     "ReachSupport": {
         "Title": "Solicita apoyo",
+        "NameLabel": "Nombre",
+        "EmailLabel": "Dirección de Correo",
         "Description": "¿Preguntas? ¿Necesitas asistencia? Nuestro equipo de soporte dedicado está aquí para ayudarte en cada paso:",
         "FirstNamePlaceholder": "Ingresa tu Nombre",
         "EmailPlaceholder": "Ingresa tu Dirección de Correo",
