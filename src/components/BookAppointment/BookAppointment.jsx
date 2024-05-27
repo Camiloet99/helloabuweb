@@ -45,10 +45,8 @@ const BookAppointment = () => {
             placeholder={t("BookAppointment.DatePlaceholder")}
           />
         </div>
-        <div className="input-content">
-          <button type="submit" className="bookNow">
-            {t("BookAppointment.BookNowButton")}
-          </button>
+        <div className="input-content bookNow">
+          <button type="submit">{t("BookAppointment.BookNowButton")}</button>
         </div>
       </form>
     </div>

@@ -4,12 +4,15 @@ import { useDispatch } from "react-redux";
 import { loginUser } from "../../../store/user/userActions";
 import RedirectIfAuthenticated from "../../../utils/RedirectIfAuthenticated";
 import "./Login.scss";
+import { ThreeDots } from "react-loader-spinner";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -23,16 +26,23 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     console.log("Logging in...");
+    setLoading(true);
 
     const userData = {
       email: email,
       password: password,
     };
 
-    dispatch(loginUser(userData));
+    try {
+      await dispatch(loginUser(userData));
+    } catch (error) {
+      console.error("Login failed:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -74,7 +84,18 @@ const Login = () => {
           </div>
           <div className="login-form-group">
             <button type="submit" className="login-button">
-              Login
+              {loading ? (
+                <ThreeDots
+                  visible={true}
+                  height="30"
+                  width="30"
+                  color="#1d352e"
+                  radius="4"
+                  ariaLabel="three-dots-loading"
+                />
+              ) : (
+                "Login"
+              )}
             </button>
           </div>
         </form>
@@ -91,7 +112,7 @@ const Login = () => {
           </button>
         </div>
         <p>
-          Don't have an account? <a href="/signup">Sign up</a>
+          Don't have an account? <Link to={"/helloabuweb/signup"}>Sign up</Link>
         </p>
       </div>
 

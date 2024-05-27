@@ -24,10 +24,13 @@
     flex-direction: row;
     justify-content: space-evenly;
     gap: 10px;
-
+    .bookNow {
+      justify-content: flex-end;
+    }
     .input-content {
       display: flex;
       flex-direction: column;
+
       .label-content {
         display: flex;
         align-items: center;

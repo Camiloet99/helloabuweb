@@ -41,11 +41,11 @@ const SignUp = () => {
     }
 
     registerUser(userData);
-    navigate("/login");
+    navigate("/helloabuweb/login");
   };
 
   const handleRegisterWithGoogle = () => {
-    console.log("Registrando con Google...");
+    console.log("To be implemented...");
   };
 
   return (

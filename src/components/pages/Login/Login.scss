@@ -49,6 +49,10 @@
       padding: 10px;
       margin-bottom: 10px;
       transition: 0.2s all;
+      div{
+        align-items: center;
+        justify-content: center;
+      }
       cursor: pointer;
       &:hover {
         background-color: $strong-green-button;

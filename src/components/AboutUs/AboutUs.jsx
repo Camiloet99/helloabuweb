@@ -11,7 +11,9 @@ function AboutUs() {
       <h1 dangerouslySetInnerHTML={{ __html: t("AboutUs.Title") }}></h1>
       <div className="about-us-section-container">
         <div className="about-us-section-content">
-          <img src={happyabu} alt="about-us-happy" />
+          <div className="about-us-section-image">
+            <img src={happyabu} alt="about-us-happy" />
+          </div>
           <div className="about-us-section-content-text">
             <p>{t("AboutUs.Description")}</p>
             <button>{t("AboutUs.LearnMoreButton")}</button>
