@@ -47,16 +47,16 @@ const Footer = () => {
         <span className="cut-line" />
         <div className="footer-socials">
           <div className="social-logos">
-            <a href="" className="social-link">
+            <a href="#" className="social-link">
               <img src={facebookIcon} alt="Facebook logo" />
             </a>
-            <a href="" className="social-link">
+            <a href="#" className="social-link">
               <img src={instagramIcon} alt="Instagram logo" />
             </a>
-            <a href="" className="social-link">
+            <a href="#" className="social-link">
               <img src={youtubeIcon} alt="Youtube logo" />
             </a>
-            <a href="" className="social-link">
+            <a href="#" className="social-link">
               <img src={linkedinIcon} alt="Linkedin logo" />
             </a>
           </div>

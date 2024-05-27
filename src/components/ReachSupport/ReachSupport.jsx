@@ -10,7 +10,7 @@ const ReachSupport = () => {
   return (
     <div className="reach-support-section">
       <div className="reach-support-section-container">
-        <h1>{t("ReachSupport.Title")}</h1>
+        <h2>{t("ReachSupport.Title")}</h2>
         <p>{t("ReachSupport.Description")}</p>
         <form action="">
           <div className="reach-support-content">
@@ -31,7 +31,7 @@ const ReachSupport = () => {
             </div>
             <input
               type="email"
-              id="email"
+              id="support-email"
               placeholder={t("ReachSupport.EmailPlaceholder")}
             />
           </div>

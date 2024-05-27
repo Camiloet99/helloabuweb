@@ -18,7 +18,7 @@ const BookAppointment = () => {
             <label htmlFor="email">{t("BookAppointment.EmailLabel")}</label>
           </div>
           <input
-            id="email"
+            id="booking-email"
             type="email"
             placeholder={t("BookAppointment.EmailPlaceholder")}
           />

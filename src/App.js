@@ -1,21 +1,23 @@
 import Header from "./components/header/Header";
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/pages/home/Home";
 import Footer from "./components/Footer/Footer";
 import SignUp from "./components/pages/SignUp/SignUp";
+import Login from "./components/pages/Login/Login";
 import "animate.css/animate.compat.css";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <Router className="App">
       <Header />
       <Routes>
-        <Route path="/helloabuweb" element={<Home />} />
+        <Route path="/helloabuweb" exact element={<Home />} />
         <Route path="/helloabuweb/signup" element={<SignUp />} />
+        <Route path="/helloabuweb/login" element={<Login />} />
       </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 }
 
