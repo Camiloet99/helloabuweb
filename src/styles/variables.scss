@@ -27,6 +27,9 @@ $breakpoint-lg: 1024px;
 $breakpoint-xl: 1200px;
 $max-screen-width: 1367px;
 
+
+$h1-title-size: 3.5rem;
+
 @mixin respond-to($breakpoint) {
   @if $breakpoint == sm {
     @media (max-width: $breakpoint-sm) {
