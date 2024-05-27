@@ -30,6 +30,7 @@ $max-screen-width: 1367px;
 
 $h1-title-size: 3.5rem;
 $h2-title-size: 2.5rem;
+$input-text-size: 1rem;
 
 @mixin respond-to($breakpoint) {
   @if $breakpoint == sm {

@@ -14,7 +14,10 @@
     padding: 45px 95px;
     max-width: $max-screen-width;
     margin: 0 auto;
-
+    .login-buttons{
+      display: flex;
+      gap: 10px;
+    }
     .user-dropdown {
       color: $neutral-font-color;
       cursor: pointer;

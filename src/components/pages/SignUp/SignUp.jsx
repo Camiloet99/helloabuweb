@@ -4,17 +4,18 @@ import { registerUser } from "../../../api/users/usersApi";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import RedirectIfAuthenticated from "../../../utils/RedirectIfAuthenticated";
+import visibleIcon from "../../../assets/images/icons/forms/eyeopen.svg";
+import invisibleIcon from "../../../assets/images/icons/forms/eyeclosed.svg";
 import "./SignUp.scss";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [userData, setUserData] = useState({
-    userName: "",
     fullName: "",
     email: "",
     password: "",
     phone: "",
-    userRole: "abu"
+    userRole: "abu",
   });
   const navigate = useNavigate();
   const passwordRegex =
@@ -58,18 +59,6 @@ const SignUp = () => {
       <div className="signup-content">
         <form onSubmit={handleSubmit}>
           <div className="signup-form-group">
-            <label htmlFor="username">Username</label>
-            <input
-              type="text"
-              id="userName"
-              name="userName"
-              value={userData.userName}
-              onChange={handleChange}
-              placeholder="Enter Your Username"
-              required
-            />
-          </div>
-          <div className="signup-form-group">
             <label htmlFor="Name">Name</label>
             <input
               type="text"
@@ -105,24 +94,30 @@ const SignUp = () => {
               placeholder="Enter Your Phone Number"
             />
           </div>
-          <div className="signup-form-group signup-password-group">
+          <div className="signup-form-group ">
             <label htmlFor="password">Password</label>
-            <input
-              type={showPassword ? "text" : "password"}
-              id="password"
-              name="password"
-              value={userData.password}
-              onChange={handleChange}
-              required
-              placeholder="Enter Your Password"
-            />
-            <button
-              type="button"
-              onClick={togglePasswordVisibility}
-              className="toggle-password-visibility"
-            >
-              {showPassword ? "👁️" : "👁️‍🗨️"}
-            </button>
+            <div className="signup-password-group">
+              <input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                name="password"
+                value={userData.password}
+                onChange={handleChange}
+                required
+                placeholder="Enter Your Password"
+              />
+              <button
+                type="button"
+                onClick={togglePasswordVisibility}
+                className="toggle-password-visibility"
+              >
+                <img
+                  src={showPassword ? invisibleIcon : visibleIcon}
+                  alt="password visibility"
+                />
+              </button>
+            </div>
+
             {passwordError && (
               <div className="error-message">{passwordError}</div>
             )}

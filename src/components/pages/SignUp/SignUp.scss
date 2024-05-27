@@ -51,7 +51,6 @@
       margin-top: 40px;
     }
   }
-
   .signup-form-group {
     margin-bottom: 35px;
     text-align: left;
@@ -62,7 +61,6 @@
       display: block;
       margin-bottom: 8px;
     }
-
     input {
       border: 1px solid #e7e7e7;
       border-radius: 12px;
@@ -70,29 +68,26 @@
       padding: 18px;
       box-sizing: border-box;
       height: 40px;
+      font-size: $input-text-size;
+      &::placeholder {
+        font-size: 0.9rem;
+      }
     }
   }
-
   .signup-password-group {
     position: relative;
-
-    input {
-      width: calc(100% - 40px);
-      padding-right: 40px;
-    }
-
     .toggle-password-visibility {
       position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
+      right: 8px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
       background: none;
       border: none;
       cursor: pointer;
       font-size: 16px;
     }
   }
-
   .signup-button,
   .facebook-button,
   .google-button {
@@ -111,7 +106,6 @@
       background-color: $strong-green-button;
     }
   }
-
   .signup-social-buttons {
     display: flex;
     gap: 15px;

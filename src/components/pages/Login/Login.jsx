@@ -3,9 +3,13 @@ import ReachSupport from "../../ReachSupport/ReachSupport";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../../store/user/userActions";
 import RedirectIfAuthenticated from "../../../utils/RedirectIfAuthenticated";
+import visibleIcon from "../../../assets/images/icons/forms/eyeopen.svg";
+import invisibleIcon from "../../../assets/images/icons/forms/eyeclosed.svg";
+import { useNavigate } from "react-router-dom";
 import "./Login.scss";
 import { ThreeDots } from "react-loader-spinner";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -13,6 +17,8 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+  const { t } = useTranslation("login");
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -37,6 +43,7 @@ const Login = () => {
 
     try {
       await dispatch(loginUser(userData));
+      navigate("/helloabuweb");
     } catch (error) {
       console.error("Login failed:", error);
     } finally {
@@ -46,7 +53,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <h1>Hi, Welcome Back</h1>
+      <h1>{t("LoginTitle")}</h1>
       <div className="login-content">
         <form onSubmit={handleLogin}>
           <div className="login-form-group">
@@ -60,26 +67,31 @@ const Login = () => {
               placeholder="example@email.com"
             />
           </div>
-          <div className="login-form-group password-group">
-            <label htmlFor="password">Password</label>
-            <input
-              type={showPassword ? "text" : "password"}
-              id="password"
-              name="password"
-              placeholder="Enter Your Password"
-              onChange={handlePasswordChange}
-              required
-            />
-            <button
-              type="button"
-              onClick={togglePasswordVisibility}
-              className="toggle-password-visibility"
-            >
-              {showPassword ? "👁️" : "👁️‍🗨️"}
-            </button>
+          <div className="login-form-group ">
+            <label htmlFor="password">{t("Password")}</label>
+            <div className="password-group">
+              <input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                name="password"
+                placeholder="Enter Your Password"
+                onChange={handlePasswordChange}
+                required
+              />
+              <button
+                type="button"
+                onClick={togglePasswordVisibility}
+                className="toggle-password-visibility"
+              >
+                <img
+                  src={showPassword ? invisibleIcon : visibleIcon}
+                  alt="password visibility"
+                />
+              </button>
+            </div>
           </div>
           <div className="login-form-group forgot-password">
-            <a href="/forgot-password">Forgot Password?</a>
+            <a href="/forgot-password">{t("ForgotPassword")}</a>
           </div>
           <div className="login-form-group">
             <button type="submit" className="login-button">
@@ -93,25 +105,26 @@ const Login = () => {
                   ariaLabel="three-dots-loading"
                 />
               ) : (
-                "Login"
+                t("Login")
               )}
             </button>
           </div>
         </form>
         <p className="or-with-separation">
-          <span /> Or With
+          <span /> {t("Separator")}
           <span />
         </p>
         <div className="login-social-buttons">
           <button type="button" className="facebook-button">
-            Login with Facebook
+            {t("Facebook")}
           </button>
           <button type="button" className="google-button">
-            Login with Google
+            {t("Google")}
           </button>
         </div>
-        <p>
-          Don't have an account? <Link to={"/helloabuweb/signup"}>Sign up</Link>
+        <p className="signup-question">
+          {t("DontHaveAccount")}{" "}
+          <Link to={"/helloabuweb/signup"}>{t("SignUp")}</Link>
         </p>
       </div>
 

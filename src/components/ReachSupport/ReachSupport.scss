@@ -13,8 +13,16 @@
     max-width: $max-screen-width;
     margin: 0 auto;
     .reach-support-content {
+      position: relative;
       .label-content {
         display: none;
+      }
+      .hidden-logo {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 8px;
+        margin: auto;
       }
     }
   }
@@ -42,13 +50,13 @@
     align-items: center;
     input {
       height: 52px;
-      width: 270px;
+      width: 230px;
       border: 1px solid $light-font-color;
       border-radius: 12px;
       gap: 10px;
       padding: 0 20px;
+      padding-left: 44px;
     }
-    input,
     ::-webkit-input-placeholder {
       font-weight: 500;
       font-size: 0.9rem;
@@ -82,6 +90,9 @@
       margin: 30px;
       width: auto;
       .reach-support-content {
+        .hidden-logo {
+          display: none;
+        }
         .label-content {
           display: flex;
           justify-content: center;
@@ -108,6 +119,10 @@
         border-radius: 10px;
         flex-direction: column;
         gap: 20px;
+        input{
+          padding-left: 20px;
+          width: 270px;
+        }
       }
     }
   }

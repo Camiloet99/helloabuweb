@@ -43,16 +43,26 @@ function Header() {
               <Link to="/profile">{t("Profile")}</Link>
               <Link to="/preferences">{t("Preferences")}</Link>
               <Link to="/help">{t("Help")}</Link>
-              <button onClick={handleLogout} className="logout-button">{t("Logout")}</button>
+              <button onClick={handleLogout} className="logout-button">
+                {t("Logout")}
+              </button>
             </div>
           </div>
         ) : (
-          <button
-            className="header-join-us"
-            onClick={() => navigate("/helloabuweb/signup")}
-          >
-            {t("Join us")}
-          </button>
+          <div className="login-buttons">
+            <button
+              className="header-join-us"
+              onClick={() => navigate("/helloabuweb/signup")}
+            >
+              {t("Join us")}
+            </button>
+            <button
+              className="header-join-us"
+              onClick={() => navigate("/helloabuweb/login")}
+            >
+              {t("Login")}
+            </button>
+          </div>
         )}
         <div className="language-switcher">
           <button onClick={() => changeLanguage("en")}>EN</button>
