@@ -34,12 +34,8 @@ export const logoutUser = () => {
   };
 };
 
-//TODO implement update user
 export const updateUserProfile = (userInfo) => {
   return (dispatch, getState) => {
-    // Aquí se haría la llamada a la API externa para actualizar el perfil
-    // Por ejemplo, usando fetch o axios. El código estará comentado ya que
-    // el endpoint aún no está especificado.
     /*
     fetch('ENDPOINT_URL', {
       method: 'PUT',

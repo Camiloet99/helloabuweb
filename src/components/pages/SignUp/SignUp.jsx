@@ -10,10 +10,11 @@ const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [userData, setUserData] = useState({
     userName: "",
-    name: "",
+    fullName: "",
     email: "",
     password: "",
     phone: "",
+    userRole: "abu"
   });
   const navigate = useNavigate();
   const passwordRegex =
@@ -72,9 +73,9 @@ const SignUp = () => {
             <label htmlFor="Name">Name</label>
             <input
               type="text"
-              id="name"
-              name="name"
-              value={userData.name}
+              id="fullName"
+              name="fullName"
+              value={userData.fullName}
               onChange={handleChange}
               placeholder="Enter Your Full Name"
               required

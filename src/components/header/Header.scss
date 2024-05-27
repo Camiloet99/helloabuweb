@@ -14,8 +14,49 @@
     padding: 45px 95px;
     max-width: $max-screen-width;
     margin: 0 auto;
-  }
 
+    .user-dropdown {
+      color: $neutral-font-color;
+      cursor: pointer;
+      &:hover .dropdown-content {
+        display: block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: $soft-green;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 10px;
+        padding: 20px;
+        a {
+          margin-bottom: 20px;
+          color: $neutral-font-color;
+          display: block;
+          text-decoration: none;
+          transition: 0.2s all;
+          &:hover {
+            color: $cambridge-green;
+          }
+        }
+        .logout-button {
+          cursor: pointer;
+          border: none;
+          background-color: transparent;
+          margin: 0 auto;
+          padding: 0;
+          transition: 0.2s all;
+          font-weight: bold;
+          font-size: 1rem;
+          color: $cambridge-green;
+          &:hover{
+            color: $tea-green;
+          }
+        }
+      }
+    }
+  }
   .header-logo img {
     height: 60px;
     width: auto;
@@ -66,7 +107,7 @@
       width: auto;
       cursor: pointer;
     }
-    .header-navigation{
+    .header-navigation {
       display: none;
     }
   }
