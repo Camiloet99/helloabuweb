@@ -3,14 +3,10 @@ import { useTranslation } from "react-i18next";
 import email from "../../assets/images/icons/forms/email.svg";
 import phone from "../../assets/images/icons/forms/email.svg";
 import calendar from "../../assets/images/icons/forms/calendar.svg";
-import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import "./BookAppointment.scss";
 
 const BookAppointment = () => {
-  const navigate = useNavigate();
   const { t } = useTranslation("home");
-  const user = useSelector((state) => state.user);
 
   return (
     <div className="appointment-card">

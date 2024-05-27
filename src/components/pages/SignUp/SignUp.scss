@@ -54,6 +54,10 @@
   .signup-form-group {
     margin-bottom: 35px;
     text-align: left;
+    .signup-error {
+      font-size: 0.8rem;
+      color: red;
+    }
     ::-webkit-input-placeholder {
       color: #d1d1d1;
     }

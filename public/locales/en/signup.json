@@ -1,0 +1,14 @@
+{
+    "SignUpTitle": "Create an account",
+    "SignUpSubtitle": "Connect with<span> certified helpers </span>now.",
+    "FormName": "Name",
+    "FormEmail": "Email",
+    "FormPhone": "Phone number",
+    "FormPassword": "Password",
+    "SignUp": "Sign Up",
+    "Separator": "Or With",
+    "Facebook": "Sign up with Facebook",
+    "Google": "Sign up with Google",
+    "HaveAccount": "Already have an account?",
+    "Login": "Login"
+}

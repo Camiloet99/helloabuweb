@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReachSupport from "../../ReachSupport/ReachSupport";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../../store/user/userActions";
@@ -13,12 +13,19 @@ import { useTranslation } from "react-i18next";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [errorLogin, setErrorLogin] = useState("");
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { t } = useTranslation("login");
+
+  useEffect(() => {
+    setTimeout(() => {
+      setErrorLogin("");
+    }, 7000);
+  }, [errorLogin]);
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -42,8 +49,9 @@ const Login = () => {
     };
 
     try {
-      await dispatch(loginUser(userData));
-      navigate("/helloabuweb");
+      await dispatch(
+        loginUser(userData, navigate("/helloabuweb"), setErrorLogin)
+      );
     } catch (error) {
       console.error("Login failed:", error);
     } finally {
@@ -90,6 +98,8 @@ const Login = () => {
               </button>
             </div>
           </div>
+          {errorLogin && <p className="login-error">{errorLogin}</p>}
+
           <div className="login-form-group forgot-password">
             <a href="/forgot-password">{t("ForgotPassword")}</a>
           </div>

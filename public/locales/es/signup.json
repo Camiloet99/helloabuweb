@@ -1,0 +1,14 @@
+{
+    "SignUpTitle": "Crea una cuenta",
+    "SignUpSubtitle": "Conéctate con<span> cuidadores certificados </span>ahora.",
+    "FormName": "Nombre",
+    "FormEmail": "Email",
+    "FormPhone": "Número de teléfono",
+    "FormPassword": "Contraseña",
+    "SignUp": "Registrarse",
+    "Separator": "O con",
+    "Facebook": "Regístrate con Facebook",
+    "Google": "Regístrate con Google",
+    "HaveAccount": "¿Ya posees una cuenta?",
+    "Login": "Inicia sesión"
+}

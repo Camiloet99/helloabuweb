@@ -19,6 +19,11 @@
     border-radius: 70px;
     display: flex;
     flex-direction: column;
+    .login-error {
+      margin-block-start: 0;
+      font-size: 0.8rem;
+      color: red;
+    }
     .or-with-separation {
       display: flex;
       justify-content: space-around;
@@ -66,7 +71,7 @@
       margin-top: 40px;
     }
     .login-form-group {
-      margin-bottom: 35px;
+      margin-top: 35px;
       text-align: left;
       ::-webkit-input-placeholder {
         color: #d1d1d1;

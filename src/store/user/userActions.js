@@ -4,20 +4,25 @@ export const UPDATE_USER_PROFILE = "UPDATE_USER_PROFILE";
 export const USER_LOGIN = "USER_LOGIN";
 export const USER_LOGOUT = "USER_LOGOUT";
 
-export const loginUser = (userData) => async (dispatch) => {
-  try {
-    const userResponse = await login(userData);
-
-    localStorage.setItem("userInfo", JSON.stringify(userResponse?.result));
-    localStorage.setItem("authToken", userResponse?.result?.token);
-    dispatch({
-      type: USER_LOGIN,
-      payload: userResponse?.result,
-    });
-  } catch (error) {
-    console.error("Login error:", error);
-  }
-};
+export const loginUser =
+  (userData, navigate, errorStatus) => async (dispatch) => {
+    try {
+      const userResponse = await login(userData);
+      if (userResponse?.status === 200) {
+        localStorage.setItem("userInfo", JSON.stringify(userResponse?.result));
+        localStorage.setItem("authToken", userResponse?.result?.token);
+        dispatch({
+          type: USER_LOGIN,
+          payload: userResponse?.result,
+        });
+        navigate();
+      } else {
+        errorStatus(userResponse?.error);
+      }
+    } catch (error) {
+      errorStatus(error?.error);
+    }
+  };
 
 export const updateUser = (userData) => {
   localStorage.setItem("userInfo", JSON.stringify(userData));

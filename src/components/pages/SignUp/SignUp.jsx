@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReachSupport from "../../ReachSupport/ReachSupport";
 import { registerUser } from "../../../api/users/usersApi";
 import { useNavigate } from "react-router-dom";
@@ -7,6 +7,7 @@ import RedirectIfAuthenticated from "../../../utils/RedirectIfAuthenticated";
 import visibleIcon from "../../../assets/images/icons/forms/eyeopen.svg";
 import invisibleIcon from "../../../assets/images/icons/forms/eyeclosed.svg";
 import "./SignUp.scss";
+import { useTranslation } from "react-i18next";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -21,6 +22,8 @@ const SignUp = () => {
   const passwordRegex =
     /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{4,}$/;
   const [passwordError, setPasswordError] = useState("");
+  const { t } = useTranslation("signup");
+  const [signupError, setSignupError] = useState("");
 
   const handleChange = (e) => {
     setUserData({ ...userData, [e.target.name]: e.target.value });
@@ -33,7 +36,7 @@ const SignUp = () => {
     setShowPassword(!showPassword);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!passwordRegex.test(userData.password)) {
       setPasswordError(
@@ -42,24 +45,35 @@ const SignUp = () => {
       return;
     }
 
-    registerUser(userData);
-    navigate("/helloabuweb/login");
+    await registerUser(
+      userData,
+      () => navigate("/helloabuweb/login"),
+      setSignupError
+    );
   };
 
   const handleRegisterWithGoogle = () => {
     console.log("To be implemented...");
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      setSignupError("");
+    }, 7000);
+  }, [signupError]);
+
   return (
     <div className="signup-container">
-      <h1>Create an account</h1>
-      <p>
-        Connect with<span> certified helpers </span>now.
-      </p>
+      <h1>{t("SignUpTitle")}</h1>
+      <p
+        dangerouslySetInnerHTML={{
+          __html: t("SignUpSubtitle"),
+        }}
+      />
       <div className="signup-content">
         <form onSubmit={handleSubmit}>
           <div className="signup-form-group">
-            <label htmlFor="Name">Name</label>
+            <label htmlFor="Name">{t("FormName")}</label>
             <input
               type="text"
               id="fullName"
@@ -71,7 +85,7 @@ const SignUp = () => {
             />
           </div>
           <div className="signup-form-group">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">{t("FormEmail")}</label>
             <input
               type="email"
               id="login-email"
@@ -83,7 +97,7 @@ const SignUp = () => {
             />
           </div>
           <div className="signup-form-group">
-            <label htmlFor="phone">Phone number</label>
+            <label htmlFor="phone">{t("FormPhone")}</label>
             <input
               type="tel"
               id="phone"
@@ -95,7 +109,7 @@ const SignUp = () => {
             />
           </div>
           <div className="signup-form-group ">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">{t("FormPassword")}</label>
             <div className="signup-password-group">
               <input
                 type={showPassword ? "text" : "password"}
@@ -124,29 +138,34 @@ const SignUp = () => {
           </div>
           <div className="signup-form-group">
             <button type="submit" className="signup-button">
-              Sign Up
+              {t("SignUp")}
             </button>
+            {signupError ? (
+              <p className="signup-error">{signupError}</p>
+            ) : (
+              <></>
+            )}
           </div>
         </form>
         <div className="or-with-separation">
           <span />
-          <p>Or With</p>
+          <p>{t("Separator")}</p>
           <span />
         </div>
         <div className="signup-social-buttons">
           <button type="button" className="facebook-button">
-            Sign up with Facebook
+            {t("Facebook")}
           </button>
           <button
             type="button"
             className="google-button"
             onClick={handleRegisterWithGoogle}
           >
-            Sign up with Google
+            {t("Google")}
           </button>
         </div>
         <p className="login-question">
-          Already have an account? <Link to="/helloabuweb/login">Login</Link>
+          {t("HaveAccount")} <Link to="/helloabuweb/login">{t("Login")}</Link>
         </p>
       </div>
       <ReachSupport />

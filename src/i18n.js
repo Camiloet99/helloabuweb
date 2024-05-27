@@ -11,7 +11,7 @@ i18n
     },
     fallbackLng: "en",
     debug: false,
-    ns: ["header", "common", "home", "login"],
+    ns: ["header", "common", "home", "login", "signup"],
     defaultNS: "common",
     interpolation: {
       escapeValue: false,
