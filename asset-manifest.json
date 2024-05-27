@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/helloabuweb/static/css/main.48e17ddc.css",
-    "main.js": "/helloabuweb/static/js/main.e55c9d26.js",
+    "main.css": "/helloabuweb/static/css/main.df20cc53.css",
+    "main.js": "/helloabuweb/static/js/main.c753bbfe.js",
     "static/js/453.3aab4d9e.chunk.js": "/helloabuweb/static/js/453.3aab4d9e.chunk.js",
     "static/media/doctor.png": "/helloabuweb/static/media/doctor.4b27e7a05ba45ba93b6d.png",
     "static/media/abu2.jpg": "/helloabuweb/static/media/abu2.fd46dd8802dc399bfe98.jpg",
@@ -20,19 +20,21 @@
     "static/media/email.svg": "/helloabuweb/static/media/email.c6a3558d219711dce2d59f50fd8cfbc1.svg",
     "static/media/LinkedIn.svg": "/helloabuweb/static/media/LinkedIn.6e137d92a7c7be9a0f767791ffa5a0ed.svg",
     "static/media/firstname.svg": "/helloabuweb/static/media/firstname.08af4acf9ffd3cca94edb8895da318de.svg",
+    "static/media/eyeclosed.svg": "/helloabuweb/static/media/eyeclosed.0397e96b825cb259841680cb6da93cc4.svg",
     "index.html": "/helloabuweb/index.html",
     "static/media/Youtube.svg": "/helloabuweb/static/media/Youtube.2325f47c959147eb6d6f1979c47377a1.svg",
     "static/media/onlineconsultations.svg": "/helloabuweb/static/media/onlineconsultations.ac5889fa88aaa2693cd4ad256956a401.svg",
+    "static/media/eyeopen.svg": "/helloabuweb/static/media/eyeopen.915428c040ea64f92b2ad8d09832fcaf.svg",
     "static/media/caringstaff.svg": "/helloabuweb/static/media/caringstaff.6e556d8b974a957d2cc13f23fe809e0d.svg",
     "static/media/eldercare.svg": "/helloabuweb/static/media/eldercare.f91aca26fb5e1acf307fd7f328e70f39.svg",
     "static/media/Facebook.svg": "/helloabuweb/static/media/Facebook.f0c3863dec4850a8db17bff791f58926.svg",
     "static/media/getFetch.cjs": "/helloabuweb/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
-    "main.48e17ddc.css.map": "/helloabuweb/static/css/main.48e17ddc.css.map",
-    "main.e55c9d26.js.map": "/helloabuweb/static/js/main.e55c9d26.js.map",
+    "main.df20cc53.css.map": "/helloabuweb/static/css/main.df20cc53.css.map",
+    "main.c753bbfe.js.map": "/helloabuweb/static/js/main.c753bbfe.js.map",
     "453.3aab4d9e.chunk.js.map": "/helloabuweb/static/js/453.3aab4d9e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.48e17ddc.css",
-    "static/js/main.e55c9d26.js"
+    "static/css/main.df20cc53.css",
+    "static/js/main.c753bbfe.js"
   ]
 }
