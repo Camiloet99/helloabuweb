@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/helloabuweb/static/css/main.06e2a9a0.css",
-    "main.js": "/helloabuweb/static/js/main.db137d4b.js",
+    "main.css": "/helloabuweb/static/css/main.37d2c25a.css",
+    "main.js": "/helloabuweb/static/js/main.256a7ca9.js",
     "static/js/453.3aab4d9e.chunk.js": "/helloabuweb/static/js/453.3aab4d9e.chunk.js",
     "static/media/doctor.png": "/helloabuweb/static/media/doctor.4b27e7a05ba45ba93b6d.png",
     "static/media/abu2.jpg": "/helloabuweb/static/media/abu2.fd46dd8802dc399bfe98.jpg",
@@ -27,12 +27,12 @@
     "static/media/eldercare.svg": "/helloabuweb/static/media/eldercare.f91aca26fb5e1acf307fd7f328e70f39.svg",
     "static/media/Facebook.svg": "/helloabuweb/static/media/Facebook.f0c3863dec4850a8db17bff791f58926.svg",
     "static/media/getFetch.cjs": "/helloabuweb/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
-    "main.06e2a9a0.css.map": "/helloabuweb/static/css/main.06e2a9a0.css.map",
-    "main.db137d4b.js.map": "/helloabuweb/static/js/main.db137d4b.js.map",
+    "main.37d2c25a.css.map": "/helloabuweb/static/css/main.37d2c25a.css.map",
+    "main.256a7ca9.js.map": "/helloabuweb/static/js/main.256a7ca9.js.map",
     "453.3aab4d9e.chunk.js.map": "/helloabuweb/static/js/453.3aab4d9e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.06e2a9a0.css",
-    "static/js/main.db137d4b.js"
+    "static/css/main.37d2c25a.css",
+    "static/js/main.256a7ca9.js"
   ]
 }
