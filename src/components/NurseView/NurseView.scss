@@ -86,11 +86,11 @@
             .profile-name {
               font-size: 1.2rem;
             }
-            .profile-location{
+            .profile-location {
               display: flex;
               justify-content: center;
               gap: 7px;
-              font-size: .7rem;
+              font-size: 0.7rem;
             }
           }
           .profile-picture {
@@ -136,6 +136,18 @@
       &:hover {
         background-color: $dark-green-title;
       }
+    }
+  }
+}
+
+@include respond-to(lg) {
+  .nurse-view {
+    font-family: "Manrope", sans-serif;
+    margin: 80px 0;
+    width: auto;
+    .nurse-view-content {
+      width: auto;
+      overflow-x: scroll;
     }
   }
 }

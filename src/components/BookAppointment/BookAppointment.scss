@@ -88,9 +88,12 @@
     .appointment-card-form {
       flex-direction: column;
       .input-content {
+        justify-content: center;
+        align-items: center;
         input {
           margin-bottom: 16px;
-          width: auto;
+          width: 100%;
+          max-width: 400px;
         }
         .label-content {
           margin-top: 10p;

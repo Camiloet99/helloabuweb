@@ -66,6 +66,8 @@
   .service-card {
     width: auto;
     height: auto;
+    max-width: 480px;
+    margin: 0 auto;
     .service-container {
       .background-image {
         width: 100%;

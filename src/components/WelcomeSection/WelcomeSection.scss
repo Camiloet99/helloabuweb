@@ -68,6 +68,10 @@
 
 @include respond-to(lg) {
   .welcome-container {
+    background-image: url("../../assets/images/backgroundmobile.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: inherit;
     height: auto;
     .welcome-section {
       padding-left: 0;
@@ -79,10 +83,11 @@
         width: auto;
         height: auto;
         h1 {
+          opacity: 0;
+          -webkit-text-stroke: 0.01px white;
           font-size: 3rem;
         }
       }
-      
     }
     .welcome-booking {
       width: 90%;
