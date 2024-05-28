@@ -34,6 +34,7 @@ export const updateUser = (userData) => {
 
 export const logoutUser = () => {
   localStorage.removeItem("userInfo");
+  localStorage.removeItem("authToken");
   return {
     type: USER_LOGOUT,
   };

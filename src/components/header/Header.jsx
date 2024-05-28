@@ -51,13 +51,13 @@ function Header() {
         ) : (
           <div className="login-buttons">
             <button
-              className="header-join-us"
+              className="header-join-us join-us"
               onClick={() => navigate("/helloabuweb/signup")}
             >
               {t("Join us")}
             </button>
             <button
-              className="header-join-us"
+              className="header-join-us login"
               onClick={() => navigate("/helloabuweb/login")}
             >
               {t("Login")}

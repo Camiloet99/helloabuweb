@@ -56,7 +56,7 @@ const Footer = () => {
             <a href="/" className="social-link">
               <img src={youtubeIcon} alt="Youtube logo" />
             </a>
-            <a href="7" className="social-link">
+            <a href="/" className="social-link">
               <img src={linkedinIcon} alt="Linkedin logo" />
             </a>
           </div>

@@ -1,8 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import email from "../../assets/images/icons/forms/email.svg";
-import phone from "../../assets/images/icons/forms/email.svg";
-import calendar from "../../assets/images/icons/forms/calendar.svg";
+import phone from "../../assets/images/icons/forms/phone.svg";
+import calendar from "../../assets/images/icons/forms/date.svg";
 import "./BookAppointment.scss";
 
 const BookAppointment = () => {

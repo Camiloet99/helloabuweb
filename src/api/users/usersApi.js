@@ -39,3 +39,19 @@ export const login = async (loginRequest) => {
     throw error.response ? error.response.data : error;
   }
 };
+
+export const getUserById = async (userId) => {
+  const token = localStorage.getItem("authToken");
+
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  try {
+    const response = await axios.get(`/users/${userId}`, config);
+    return response.data;
+  } catch (error) {
+    throw error.response ? error.response.data : error;
+  }
+};

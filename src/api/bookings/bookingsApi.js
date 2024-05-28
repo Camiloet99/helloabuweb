@@ -18,6 +18,42 @@ export const getBookingsList = async () => {
   }
 };
 
+export const finishBooking = async (bookingId) => {
+  const token = localStorage.getItem("authToken");
+
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  try {
+    const response = await axios.put(
+      `/bookings/${bookingId}/finish`,
+      {},
+      config
+    );
+    return response?.data?.result;
+  } catch (error) {
+    throw error.response ? error.response.data : error;
+  }
+};
+
+export const assignBooking = async (bookingId) => {
+  const token = localStorage.getItem("authToken");
+
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  try {
+    const response = await axios.put(`/bookings/${bookingId}`, {}, config);
+    return response?.data?.result;
+  } catch (error) {
+    throw error.response ? error.response.data : error;
+  }
+};
+
 export const createBooking = async (booking) => {
   const token = localStorage.getItem("authToken");
   const config = {

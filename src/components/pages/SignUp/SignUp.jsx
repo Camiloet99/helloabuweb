@@ -8,14 +8,17 @@ import visibleIcon from "../../../assets/images/icons/forms/eyeopen.svg";
 import invisibleIcon from "../../../assets/images/icons/forms/eyeclosed.svg";
 import "./SignUp.scss";
 import { useTranslation } from "react-i18next";
+import PhoneInput from "react-phone-number-input";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [countryCode, setCountryCode] = useState();
+
   const [userData, setUserData] = useState({
     fullName: "",
     email: "",
     password: "",
-    phone: "",
+    phoneNumber: countryCode,
     userRole: "abu",
   });
   const navigate = useNavigate();
@@ -44,7 +47,7 @@ const SignUp = () => {
       );
       return;
     }
-
+    userData.phoneNumber = countryCode;
     await registerUser(
       userData,
       () => navigate("/helloabuweb/login"),
@@ -98,14 +101,12 @@ const SignUp = () => {
           </div>
           <div className="signup-form-group">
             <label htmlFor="phone">{t("FormPhone")}</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              value={userData.phone}
-              onChange={handleChange}
-              required
+            <PhoneInput
+              international
+              defaultCountry="US"
+              value={countryCode}
               placeholder="Enter Your Phone Number"
+              onChange={setCountryCode}
             />
           </div>
           <div className="signup-form-group ">

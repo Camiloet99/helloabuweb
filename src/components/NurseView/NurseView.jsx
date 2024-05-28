@@ -1,16 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { getBookingsList } from "../../api/bookings/bookingsApi";
+import { finishBooking } from "../../api/bookings/bookingsApi";
 import BookingModal from "../BookingModal/BookingModal";
+import profileExample from "../../assets/images/icons/profileexample.jpg";
+import location from "../../assets/images/icons/forms/location.svg";
+import messenger from "../../assets/images/icons/socialmedia/Messenger.svg";
+import whatsapp from "../../assets/images/icons/socialmedia/Whatsapp.svg";
+import google from "../../assets/images/icons/socialmedia/Messenger.svg";
+import zoom from "../../assets/images/icons/socialmedia/Messenger.svg";
+import phone from "../../assets/images/icons/forms/phone.svg";
+import { useSelector } from "react-redux";
 import "./NurseView.scss";
+import { useToast } from "../../context/ToastContext";
 
-const itemsPerPage = 10;
+const itemsPerPage = 4;
 
 const NurseView = () => {
   const [usersBookings, setUsersBookings] = useState([]);
   const [selectedBooking, setSelectedBooking] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
+  const user = useSelector((state) => state.user);
+  const { triggerToast } = useToast();
 
-  // Correcting the use of selectedBooking to usersBookings for pagination
   const lastItemIndex = currentPage * itemsPerPage;
   const firstItemIndex = lastItemIndex - itemsPerPage;
   const currentBookings = usersBookings.slice(firstItemIndex, lastItemIndex);
@@ -30,62 +41,121 @@ const NurseView = () => {
     setSelectedBooking(null);
   };
 
-  const formatDateTime = (dateTimeString) => {
+  const getPlatformLogo = (platform) => {
+    switch (platform) {
+      case "wpp":
+        return whatsapp;
+      case "facebook":
+        return messenger;
+      case "google":
+        return google;
+      case "phone":
+        return phone;
+      case "zoom":
+        return zoom;
+      default:
+        return phone;
+    }
+  };
+
+  const formatDate = (dateTimeString) => {
     const date = new Date(dateTimeString);
     return date.toLocaleString("en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
+    });
+  };
+
+  const formatTime = (dateTimeString) => {
+    const date = new Date(dateTimeString);
+    return date.toLocaleString("en-US", {
       hour: "numeric",
       minute: "numeric",
       hour12: true,
     });
   };
 
-  useEffect(() => {
-    const fetchUsersBookings = async () => {
-      try {
-        const response = await getBookingsList();
-        const sortedBookings = response.sort((a, b) => {
-          return new Date(b.creationDate) - new Date(a.creationDate);
-        });
-        setUsersBookings(sortedBookings);
-      } catch (error) {
-        console.log(error);
-      }
-    };
+  const fetchUsersBookings = async () => {
+    try {
+      const response = await getBookingsList();
+      const sortedBookings = response.sort((a, b) => {
+        return new Date(b.creationDate) - new Date(a.creationDate);
+      });
+      setUsersBookings(sortedBookings);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
+  useEffect(() => {
     fetchUsersBookings();
   }, []);
 
-  useEffect(() => {
-    console.log(usersBookings);
-  }, [usersBookings]);
+  const handleFinishBooking = async (booking) => {
+    await finishBooking(booking?.bookingId);
+    fetchUsersBookings();
+    triggerToast("Booking has been finished succesfully!");
+  };
 
   return (
     <div className="nurse-view">
+      <h1>Active bookings</h1>
       <div className="nurse-view-content">
-        <h1>Active bookings</h1>
         <table>
           <thead>
             <tr>
-              <th>Nombre</th>
-              <th>Estado</th>
-              <th>Fecha de Creación</th>
-              <th>Acciones</th>
+              <th>Patient</th>
+              <th>ID</th>
+              <th>Date</th>
+              <th>Hour</th>
+              <th>Status</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            {currentBookings.map((booking) => (
+            {currentBookings?.map((booking) => (
               <tr key={booking.bookingId}>
-                <td>{booking.userName}</td>
+                <td className="patient-profile">
+                  <div className="section-content">
+                    <div className="profile-picture">
+                      <img src={profileExample} alt="profile" />
+                    </div>
+                    <div className="profile-text">
+                      <p className="profile-name">{booking.userName}</p>
+                      <p className="profile-location">
+                        <img src={location} alt="location" />
+                        San Francisco.
+                      </p>
+                    </div>
+                  </div>
+                </td>
+                <td>#{booking.bookingId}</td>
+                <td>{formatDate(booking.creationDate)}</td>
+                <td>{formatTime(booking.creationDate)}</td>
                 <td className="booking-status">{booking.bookingStatus}</td>
-                <td>{formatDateTime(booking.creationDate)}</td>
                 <td>
-                  {booking.bookingStatus === "PENDING" && (
+                  {booking.bookingStatus === "PENDING" ? (
                     <button onClick={() => handleDetailsClick(booking)}>
-                      Detalles
+                      <img
+                        src={getPlatformLogo(booking?.selectedPlatform)}
+                        alt="platform-logo"
+                      />
                     </button>
+                  ) : booking.bookingStatus === "PROGRESS" ? (
+                    <>
+                      <button
+                        onClick={() => handleFinishBooking(booking)}
+                        disabled={!booking?.takenBy === user?.email}
+                      >
+                        Finish
+                      </button>
+                      <button onClick={() => handleDetailsClick(booking)}>
+                        Details
+                      </button>
+                    </>
+                  ) : (
+                    <span></span>
                   )}
                 </td>
               </tr>
@@ -104,7 +174,11 @@ const NurseView = () => {
           ))}
         </div>
         {selectedBooking && (
-          <BookingModal booking={selectedBooking} onClose={handleCloseModal} />
+          <BookingModal
+            booking={selectedBooking}
+            onClose={handleCloseModal}
+            refresh={fetchUsersBookings}
+          />
         )}
       </div>
     </div>
