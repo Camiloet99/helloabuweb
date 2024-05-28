@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/helloabuweb/static/css/main.93226345.css",
-    "main.js": "/helloabuweb/static/js/main.43c93862.js",
+    "main.css": "/helloabuweb/static/css/main.a981bf2c.css",
+    "main.js": "/helloabuweb/static/js/main.1e67e48f.js",
     "static/js/453.3aab4d9e.chunk.js": "/helloabuweb/static/js/453.3aab4d9e.chunk.js",
     "static/media/doctor.png": "/helloabuweb/static/media/doctor.4b27e7a05ba45ba93b6d.png",
     "static/media/abu2.jpg": "/helloabuweb/static/media/abu2.fd46dd8802dc399bfe98.jpg",
@@ -9,32 +9,38 @@
     "static/media/abucollage.png": "/helloabuweb/static/media/abucollage.7386fed1c5a47b1a4af5.png",
     "static/media/happyabu.jpg": "/helloabuweb/static/media/happyabu.293de8640f518f4b52b6.jpg",
     "static/media/herobackground.jpg": "/helloabuweb/static/media/herobackground.97b3d8b787bb64ca4e62.jpg",
+    "static/media/profileexample.jpg": "/helloabuweb/static/media/profileexample.cb2004007bf711447407.jpg",
     "static/media/Manrope-Bold.woff2": "/helloabuweb/static/media/Manrope-Bold.29881e5d43ff99584f9c.woff2",
     "static/media/Manrope-Regular.woff2": "/helloabuweb/static/media/Manrope-Regular.2e6d3d21cb34c92a8f7a.woff2",
     "static/media/Manrope-Medium.woff2": "/helloabuweb/static/media/Manrope-Medium.0b33f41eb1974d58060a.woff2",
     "static/media/logohorizontal.svg": "/helloabuweb/static/media/logohorizontal.3bf15baecb32b5b9c93ae67c62042d11.svg",
     "static/media/logovertical.svg": "/helloabuweb/static/media/logovertical.ffc0530efa4c92376dfcc8002816c9c6.svg",
     "static/media/calendar.svg": "/helloabuweb/static/media/calendar.cf09a81b866dffa5e5d3b0ab9eda5164.svg",
+    "static/media/date.svg": "/helloabuweb/static/media/date.96c05a6bcd84c1dd89dbf9216c1f8a26.svg",
+    "static/media/Whatsapp.svg": "/helloabuweb/static/media/Whatsapp.e5cf33242fb753048171d8eac3f1ca5f.svg",
     "static/media/Instagram.svg": "/helloabuweb/static/media/Instagram.cfa9c806a9e5f499daca4cfb5274ef46.svg",
     "static/media/qualitysupport.svg": "/helloabuweb/static/media/qualitysupport.c8b7ce065ff7e4c67675620e5572b07f.svg",
+    "static/media/Messenger.svg": "/helloabuweb/static/media/Messenger.f227bb49b281c1d7adc9ce8e187a8f8d.svg",
     "static/media/email.svg": "/helloabuweb/static/media/email.c6a3558d219711dce2d59f50fd8cfbc1.svg",
     "static/media/LinkedIn.svg": "/helloabuweb/static/media/LinkedIn.6e137d92a7c7be9a0f767791ffa5a0ed.svg",
+    "static/media/phone.svg": "/helloabuweb/static/media/phone.caba6c228520bb4b505956ffd6233ae9.svg",
     "static/media/firstname.svg": "/helloabuweb/static/media/firstname.08af4acf9ffd3cca94edb8895da318de.svg",
     "static/media/eyeclosed.svg": "/helloabuweb/static/media/eyeclosed.0397e96b825cb259841680cb6da93cc4.svg",
     "index.html": "/helloabuweb/index.html",
     "static/media/Youtube.svg": "/helloabuweb/static/media/Youtube.2325f47c959147eb6d6f1979c47377a1.svg",
+    "static/media/location.svg": "/helloabuweb/static/media/location.c60d52baaf9140acd5834bd491e049d8.svg",
     "static/media/onlineconsultations.svg": "/helloabuweb/static/media/onlineconsultations.ac5889fa88aaa2693cd4ad256956a401.svg",
     "static/media/eyeopen.svg": "/helloabuweb/static/media/eyeopen.915428c040ea64f92b2ad8d09832fcaf.svg",
     "static/media/caringstaff.svg": "/helloabuweb/static/media/caringstaff.6e556d8b974a957d2cc13f23fe809e0d.svg",
     "static/media/eldercare.svg": "/helloabuweb/static/media/eldercare.f91aca26fb5e1acf307fd7f328e70f39.svg",
     "static/media/Facebook.svg": "/helloabuweb/static/media/Facebook.f0c3863dec4850a8db17bff791f58926.svg",
     "static/media/getFetch.cjs": "/helloabuweb/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
-    "main.93226345.css.map": "/helloabuweb/static/css/main.93226345.css.map",
-    "main.43c93862.js.map": "/helloabuweb/static/js/main.43c93862.js.map",
+    "main.a981bf2c.css.map": "/helloabuweb/static/css/main.a981bf2c.css.map",
+    "main.1e67e48f.js.map": "/helloabuweb/static/js/main.1e67e48f.js.map",
     "453.3aab4d9e.chunk.js.map": "/helloabuweb/static/js/453.3aab4d9e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93226345.css",
-    "static/js/main.43c93862.js"
+    "static/css/main.a981bf2c.css",
+    "static/js/main.1e67e48f.js"
   ]
 }
