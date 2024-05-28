@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/helloabuweb/static/css/main.a981bf2c.css",
-    "main.js": "/helloabuweb/static/js/main.1e67e48f.js",
+    "main.css": "/helloabuweb/static/css/main.8948eafd.css",
+    "main.js": "/helloabuweb/static/js/main.37ae671f.js",
     "static/js/453.3aab4d9e.chunk.js": "/helloabuweb/static/js/453.3aab4d9e.chunk.js",
     "static/media/doctor.png": "/helloabuweb/static/media/doctor.4b27e7a05ba45ba93b6d.png",
     "static/media/abu2.jpg": "/helloabuweb/static/media/abu2.fd46dd8802dc399bfe98.jpg",
     "static/media/abu1.jpg": "/helloabuweb/static/media/abu1.413ef87ac54200f87b8a.jpg",
     "static/media/abucollage.png": "/helloabuweb/static/media/abucollage.7386fed1c5a47b1a4af5.png",
     "static/media/happyabu.jpg": "/helloabuweb/static/media/happyabu.293de8640f518f4b52b6.jpg",
+    "static/media/backgroundmobile.png": "/helloabuweb/static/media/backgroundmobile.82068b0be90c971849f6.png",
     "static/media/herobackground.jpg": "/helloabuweb/static/media/herobackground.97b3d8b787bb64ca4e62.jpg",
     "static/media/profileexample.jpg": "/helloabuweb/static/media/profileexample.cb2004007bf711447407.jpg",
     "static/media/Manrope-Bold.woff2": "/helloabuweb/static/media/Manrope-Bold.29881e5d43ff99584f9c.woff2",
@@ -35,12 +36,12 @@
     "static/media/eldercare.svg": "/helloabuweb/static/media/eldercare.f91aca26fb5e1acf307fd7f328e70f39.svg",
     "static/media/Facebook.svg": "/helloabuweb/static/media/Facebook.f0c3863dec4850a8db17bff791f58926.svg",
     "static/media/getFetch.cjs": "/helloabuweb/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
-    "main.a981bf2c.css.map": "/helloabuweb/static/css/main.a981bf2c.css.map",
-    "main.1e67e48f.js.map": "/helloabuweb/static/js/main.1e67e48f.js.map",
+    "main.8948eafd.css.map": "/helloabuweb/static/css/main.8948eafd.css.map",
+    "main.37ae671f.js.map": "/helloabuweb/static/js/main.37ae671f.js.map",
     "453.3aab4d9e.chunk.js.map": "/helloabuweb/static/js/453.3aab4d9e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a981bf2c.css",
-    "static/js/main.1e67e48f.js"
+    "static/css/main.8948eafd.css",
+    "static/js/main.37ae671f.js"
   ]
 }
