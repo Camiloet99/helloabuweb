@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/helloabuweb/static/css/main.807a9e22.css",
-    "main.js": "/helloabuweb/static/js/main.ddaec6b1.js",
-    "static/js/453.3aab4d9e.chunk.js": "/helloabuweb/static/js/453.3aab4d9e.chunk.js",
+    "main.css": "/helloabuweb/static/css/main.1fcb70d8.css",
+    "main.js": "/helloabuweb/static/js/main.4aa07974.js",
+    "static/js/453.81901364.chunk.js": "/helloabuweb/static/js/453.81901364.chunk.js",
     "static/media/doctor.png": "/helloabuweb/static/media/doctor.4b27e7a05ba45ba93b6d.png",
     "static/media/abu2.jpg": "/helloabuweb/static/media/abu2.fd46dd8802dc399bfe98.jpg",
     "static/media/abu1.jpg": "/helloabuweb/static/media/abu1.413ef87ac54200f87b8a.jpg",
@@ -17,6 +17,7 @@
     "static/media/logohorizontal.svg": "/helloabuweb/static/media/logohorizontal.3bf15baecb32b5b9c93ae67c62042d11.svg",
     "static/media/logovertical.svg": "/helloabuweb/static/media/logovertical.ffc0530efa4c92376dfcc8002816c9c6.svg",
     "static/media/calendar.svg": "/helloabuweb/static/media/calendar.cf09a81b866dffa5e5d3b0ab9eda5164.svg",
+    "static/media/Teams.svg": "/helloabuweb/static/media/Teams.9b4d550b40636f56a8ce836b863b38a9.svg",
     "static/media/date.svg": "/helloabuweb/static/media/date.96c05a6bcd84c1dd89dbf9216c1f8a26.svg",
     "static/media/Whatsapp.svg": "/helloabuweb/static/media/Whatsapp.e5cf33242fb753048171d8eac3f1ca5f.svg",
     "static/media/Instagram.svg": "/helloabuweb/static/media/Instagram.cfa9c806a9e5f499daca4cfb5274ef46.svg",
@@ -31,17 +32,18 @@
     "static/media/Youtube.svg": "/helloabuweb/static/media/Youtube.2325f47c959147eb6d6f1979c47377a1.svg",
     "static/media/location.svg": "/helloabuweb/static/media/location.c60d52baaf9140acd5834bd491e049d8.svg",
     "static/media/onlineconsultations.svg": "/helloabuweb/static/media/onlineconsultations.ac5889fa88aaa2693cd4ad256956a401.svg",
+    "static/media/Zoom.svg": "/helloabuweb/static/media/Zoom.e3a23dd6d8fbc7e0c50138c94af44998.svg",
     "static/media/eyeopen.svg": "/helloabuweb/static/media/eyeopen.915428c040ea64f92b2ad8d09832fcaf.svg",
     "static/media/caringstaff.svg": "/helloabuweb/static/media/caringstaff.6e556d8b974a957d2cc13f23fe809e0d.svg",
     "static/media/eldercare.svg": "/helloabuweb/static/media/eldercare.f91aca26fb5e1acf307fd7f328e70f39.svg",
     "static/media/Facebook.svg": "/helloabuweb/static/media/Facebook.f0c3863dec4850a8db17bff791f58926.svg",
     "static/media/getFetch.cjs": "/helloabuweb/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
-    "main.807a9e22.css.map": "/helloabuweb/static/css/main.807a9e22.css.map",
-    "main.ddaec6b1.js.map": "/helloabuweb/static/js/main.ddaec6b1.js.map",
-    "453.3aab4d9e.chunk.js.map": "/helloabuweb/static/js/453.3aab4d9e.chunk.js.map"
+    "main.1fcb70d8.css.map": "/helloabuweb/static/css/main.1fcb70d8.css.map",
+    "main.4aa07974.js.map": "/helloabuweb/static/js/main.4aa07974.js.map",
+    "453.81901364.chunk.js.map": "/helloabuweb/static/js/453.81901364.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.807a9e22.css",
-    "static/js/main.ddaec6b1.js"
+    "static/css/main.1fcb70d8.css",
+    "static/js/main.4aa07974.js"
   ]
 }
