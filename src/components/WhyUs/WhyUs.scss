@@ -12,8 +12,11 @@
 
     .why-us-image {
       width: 60%;
+      display: flex;
+      justify-content: center;
       img{
         width: 70%;
+        margin: 0 auto;
       }
     }
     .why-us-text {

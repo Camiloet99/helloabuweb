@@ -7,7 +7,6 @@
   font-size: 1rem;
 
   .header-container {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,10 +20,16 @@
     .user-dropdown {
       color: $neutral-font-color;
       cursor: pointer;
+      .user-name{
+        position: relative;
+      }
       &:hover .dropdown-content {
+        position: absolute;
         display: block;
       }
       .dropdown-content {
+        top: 20px;
+        right: 0;
         display: none;
         position: absolute;
         background-color: $soft-green;

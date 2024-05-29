@@ -32,14 +32,23 @@ const BookingModal = ({ booking, onClose, refresh }) => {
   const handleTakeBooking = async () => {
     await assignBooking(booking.bookingId);
     refresh();
+    booking.bookingStatus = "PROGRESS"
     switch (booking.selectedPlatform) {
       case "wpp":
+        window.open(booking.link, "_blank");
+        break;
       case "facebook":
+        window.open(booking.link, "_blank");
+        break;
       case "google":
+        window.open(booking.link, "_blank");
+        break;
       case "zoom":
         window.location.href = booking.link;
         break;
       case "phone":
+        window.location.href = `tel:${userData.phoneNumber}`;
+        break;
       default:
         window.location.href = `tel:${userData.phoneNumber}`;
     }

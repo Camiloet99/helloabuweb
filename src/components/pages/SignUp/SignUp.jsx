@@ -7,12 +7,14 @@ import RedirectIfAuthenticated from "../../../utils/RedirectIfAuthenticated";
 import visibleIcon from "../../../assets/images/icons/forms/eyeopen.svg";
 import invisibleIcon from "../../../assets/images/icons/forms/eyeclosed.svg";
 import "./SignUp.scss";
+import { ThreeDots } from "react-loader-spinner";
 import { useTranslation } from "react-i18next";
 import PhoneInput from "react-phone-number-input";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [countryCode, setCountryCode] = useState();
+  const [isLoading, setIsLoading] = useState(false);
 
   const [userData, setUserData] = useState({
     fullName: "",
@@ -41,10 +43,12 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     if (!passwordRegex.test(userData.password)) {
       setPasswordError(
         "The password must be at least 6 characters long, contain an uppercase letter, and a symbol"
       );
+      setIsLoading(false);
       return;
     }
     userData.phoneNumber = countryCode;
@@ -53,6 +57,7 @@ const SignUp = () => {
       () => navigate("/helloabuweb/login"),
       setSignupError
     );
+    setIsLoading(false);
   };
 
   const handleRegisterWithGoogle = () => {
@@ -139,7 +144,18 @@ const SignUp = () => {
           </div>
           <div className="signup-form-group">
             <button type="submit" className="signup-button">
-              {t("SignUp")}
+              {isLoading ? (
+                <ThreeDots
+                  visible={true}
+                  height="30"
+                  width="30"
+                  color="#fff"
+                  radius="4"
+                  ariaLabel="three-dots-loading"
+                />
+              ) : (
+                t("SignUp")
+              )}
             </button>
             {signupError ? (
               <p className="signup-error">{signupError}</p>

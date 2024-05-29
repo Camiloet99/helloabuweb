@@ -38,15 +38,17 @@ function Header() {
         </nav>
         {user.email ? (
           <div className="user-dropdown">
-            <span className="user-name">{user?.fullName}</span>
-            <div className="dropdown-content">
-              <Link to="/profile">{t("Profile")}</Link>
-              <Link to="/preferences">{t("Preferences")}</Link>
-              <Link to="/help">{t("Help")}</Link>
-              <button onClick={handleLogout} className="logout-button">
-                {t("Logout")}
-              </button>
-            </div>
+            <span className="user-name">
+              {user?.fullName}
+              <div className="dropdown-content">
+                <Link to="/profile">{t("Profile")}</Link>
+                <Link to="/preferences">{t("Preferences")}</Link>
+                <Link to="/help">{t("Help")}</Link>
+                <button onClick={handleLogout} className="logout-button">
+                  {t("Logout")}
+                </button>
+              </div>
+            </span>
           </div>
         ) : (
           <div className="login-buttons">
