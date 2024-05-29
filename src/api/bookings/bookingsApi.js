@@ -68,3 +68,12 @@ export const createBooking = async (booking) => {
     throw error.response ? error.response.data : error;
   }
 };
+
+export const createBookingNoLogin = async (booking) => {
+  try {
+    const response = await axios.post(`/open/bookings`, booking, {});
+    return response.data;
+  } catch (error) {
+    throw error.response ? error.response.data : error;
+  }
+};

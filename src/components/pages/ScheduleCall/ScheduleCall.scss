@@ -1,0 +1,240 @@
+@import "../../../styles/styles.scss";
+
+.schedule-call {
+  font-family: "Manrope", sans-serif;
+  h2 {
+    margin-top: 100px;
+    font-size: $h1-title-size;
+    text-align: center;
+  }
+  p {
+    font-size: 1.1rem;
+    text-align: center;
+    color: $neutral-font-color;
+    span {
+      color: $cambridge-green;
+    }
+  }
+  .schedule-call-content {
+    max-width: 800px;
+    width: 80%;
+    border-radius: 40px;
+    background-color: $soft-green;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .instant-call {
+      margin: 80px 100px 60px 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .book-now-description {
+        text-align: center;
+        font-size: 0.8rem;
+      }
+      .book-now {
+        background-color: $cambridge-green;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        height: 60px;
+        width: 320px;
+        transition: 0.2s all;
+        cursor: pointer;
+        &:hover {
+          background-color: $strong-green-button;
+        }
+      }
+      .registration-form {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        .registration-input {
+          display: flex;
+          gap: 7px;
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+          max-width: 450px;
+          margin: 0 auto;
+          .label-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+          label {
+            font-weight: 600;
+            color: $neutral-font-color;
+          }
+          input {
+            border-radius: 12px;
+            font-size: 0.9rem;
+            padding: 18px;
+            border: 1px solid $light-font-color;
+            &::placeholder {
+              color: $light-font-color;
+            }
+          }
+        }
+      }
+    }
+    .date-picker {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      margin: 0 100px;
+      margin-top: 0;
+      label {
+        font-weight: 600;
+        color: $neutral-font-color;
+        margin-bottom: 20px;
+      }
+      .react-datepicker {
+        border-radius: 25px;
+        font-size: 0.9em;
+        &__month-container {
+          width: 100%;
+        }
+        &__header {
+          font-family: "Manrope", sans-serif;
+          border-top-left-radius: 25px;
+          border-top-right-radius: 25px;
+          background-color: transparent;
+          border: none;
+        }
+        &__current-month {
+          text-align: center;
+          color: $dark-green-title;
+        }
+        &__day-names {
+          display: flex;
+          justify-content: space-around;
+          font-weight: 600;
+          color: #3d3d3d;
+        }
+        &__week {
+          font-family: "Manrope", sans-serif;
+          display: flex;
+          justify-content: space-around;
+          font-weight: 200;
+          color: #3d3d3d;
+        }
+        &__day {
+          &:hover {
+            border-radius: 50%;
+          }
+          &--selected,
+          &--keyboard-selected {
+            background-color: $cambridge-green;
+            color: white;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+    .extra-data {
+      display: flex;
+      justify-content: center;
+      input {
+        border-radius: 12px;
+        font-size: 0.9rem;
+        width: 250px;
+        padding: 18px;
+        border: 1px solid $light-font-color;
+        &::placeholder {
+          color: $light-font-color;
+        }
+      }
+    }
+    .time-selection {
+      label {
+        font-weight: 600;
+        color: $neutral-font-color;
+      }
+      margin: 30px 100px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .times-container {
+        border-radius: 25px;
+        border: 1px solid $light-font-color;
+        background-color: white;
+        margin-top: 20px;
+        padding: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-around;
+        button.time-button {
+          cursor: pointer;
+          width: 165px;
+          height: 30px;
+          border: none;
+          background-color: #f3f2f5;
+          font-size: 0.9rem;
+          text-align: center;
+          border-radius: 10px;
+          text-transform: lowercase;
+          transition: 0.2s all;
+          font-weight: 400;
+          &:hover,
+          &.selected {
+            background-color: $cambridge-green;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .platform-selection {
+      margin: 30px 100px;
+      label {
+        font-weight: 600;
+        color: $neutral-font-color;
+      }
+      .options-container {
+        display: flex;
+        justify-content: space-around;
+        margin: 40px auto;
+        img {
+          width: 50px;
+          height: 50px;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+          &:hover {
+            transform: scale(1.1);
+          }
+          &.selected {
+            opacity: 0.4;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    .submit-booking {
+      display: flex;
+      justify-content: center;
+      margin: 40px 100px;
+      margin-bottom: 80px;
+      button {
+        background-color: $cambridge-green;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        transition: 0.2s all;
+        padding: 18px 20px;
+        cursor: pointer;
+        &:hover {
+          background-color: $strong-green-button;
+        }
+      }
+    }
+  }
+}

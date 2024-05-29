@@ -7,8 +7,11 @@ import SignUp from "./components/pages/SignUp/SignUp";
 import Login from "./components/pages/Login/Login";
 import ScrollToTop from "./utils/ScrollToTop";
 import { ToastProvider } from "./context/ToastContext";
+import ScheduleCall from "./components/pages/ScheduleCall/ScheduleCall";
 import "animate.css/animate.compat.css";
-import 'react-phone-number-input/style.css'
+import "react-phone-number-input/style.css";
+import 'react-datepicker/dist/react-datepicker.css';
+
 import "./App.css";
 
 function App() {
@@ -21,6 +24,7 @@ function App() {
           <Route path="/helloabuweb" exact element={<Home />} />
           <Route path="/helloabuweb/signup" element={<SignUp />} />
           <Route path="/helloabuweb/login" element={<Login />} />
+          <Route path="/helloabuweb/schedule" element={<ScheduleCall />} />
         </Routes>
         <Footer />
       </Router>
