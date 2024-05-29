@@ -11,10 +11,13 @@ import zoom from "../../assets/images/icons/socialmedia/Messenger.svg";
 import phone from "../../assets/images/icons/forms/phone.svg";
 import { useSelector } from "react-redux";
 import { ThreeDots } from "react-loader-spinner";
+import { assignBooking } from "../../api/bookings/bookingsApi";
 import "./NurseView.scss";
 import { useToast } from "../../context/ToastContext";
+import ConfirmationModal from "../ConfirmationModal/ConfirmationModal";
+import { deleteBooking } from "../../api/bookings/bookingsApi";
 
-const itemsPerPage = 4;
+const itemsPerPage = 5;
 
 const NurseView = () => {
   const [usersBookings, setUsersBookings] = useState([]);
@@ -23,6 +26,7 @@ const NurseView = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const user = useSelector((state) => state.user);
   const { triggerToast } = useToast();
+  const [modalGrabBooking, setModalGrabBooking] = useState(null);
 
   const lastItemIndex = currentPage * itemsPerPage;
   const firstItemIndex = lastItemIndex - itemsPerPage;
@@ -35,12 +39,39 @@ const NurseView = () => {
     setCurrentPage(pageNumber);
   };
 
-  const handleDetailsClick = (booking) => {
+  const handleDetailsClick = async (booking) => {
+    setModalGrabBooking(false);
+    setSelectedBooking(booking);
+    await assignBooking(booking.bookingId);
+    await fetchUsersBookings();
+    triggerToast("Booking has been assigned to you successfully!");
+  };
+
+  const handleGrabConfirm = async () => {
+    if (modalGrabBooking) {
+      await handleDetailsClick(modalGrabBooking);
+      closeGrabmodal();
+    }
+  };
+
+  const closeGrabmodal = () => {
+    setModalGrabBooking(null);
+  };
+
+  const handleOpenGrabModal = (booking) => {
+    setModalGrabBooking(booking);
+  };
+
+  const openDetailsModal = (booking) => {
     setSelectedBooking(booking);
   };
 
   const handleCloseModal = () => {
     setSelectedBooking(null);
+  };
+
+  const handleGrabCancel = () => {
+    setModalGrabBooking(false);
   };
 
   const getPlatformLogo = (platform) => {
@@ -104,6 +135,12 @@ const NurseView = () => {
     triggerToast("Booking has been finished successfully!");
   };
 
+  const handleDeleteBooking = async (booking) => {
+    await deleteBooking(booking?.bookingId);
+    fetchUsersBookings();
+    triggerToast("Booking has been deleted successfully!");
+  };
+
   return (
     <div className="nurse-view">
       <h1>Active bookings</h1>
@@ -128,6 +165,7 @@ const NurseView = () => {
                 <th>Date</th>
                 <th>Hour</th>
                 <th>Status</th>
+                <th>Platform</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -153,27 +191,45 @@ const NurseView = () => {
                   <td>{formatTime(booking.creationDate)}</td>
                   <td className="booking-status">{booking.bookingStatus}</td>
                   <td>
+                    <img
+                      src={getPlatformLogo(booking?.selectedPlatform)}
+                      alt="platform-logo"
+                    />
+                  </td>
+                  <td className="booking-action-button">
                     {booking.bookingStatus === "PENDING" ? (
-                      <button onClick={() => handleDetailsClick(booking)}>
-                        <img
-                          src={getPlatformLogo(booking?.selectedPlatform)}
-                          alt="platform-logo"
-                        />
-                      </button>
-                    ) : booking.bookingStatus === "PROGRESS" ? (
                       <>
                         <button
+                          onClick={() => handleOpenGrabModal(booking)}
+                          className="grab-booking-button"
+                        >
+                          Grab Booking
+                        </button>
+                      </>
+                    ) : booking.bookingStatus === "PROGRESS" ? (
+                      <div className="options-button-content">
+                        <button
                           onClick={() => handleFinishBooking(booking)}
+                          className="options-button"
                           disabled={!booking?.takenBy === user?.email}
                         >
                           Finish
                         </button>
-                        <button onClick={() => handleDetailsClick(booking)}>
+                        <button
+                          onClick={() => openDetailsModal(booking)}
+                          className="options-button"
+                        >
                           Details
                         </button>
-                      </>
+                      </div>
                     ) : (
-                      <span></span>
+                      <button
+                        onClick={() => handleDeleteBooking(booking)}
+                        className="options-button delete"
+                        disabled={!booking?.takenBy === user?.email}
+                      >
+                        Delete
+                      </button>
                     )}
                   </td>
                 </tr>
@@ -196,6 +252,13 @@ const NurseView = () => {
               booking={selectedBooking}
               onClose={handleCloseModal}
               refresh={fetchUsersBookings}
+            />
+          )}
+          {modalGrabBooking && (
+            <ConfirmationModal
+              message="Are you sure you want to take this booking?"
+              onConfirm={handleGrabConfirm}
+              onCancel={handleGrabCancel}
             />
           )}
         </div>

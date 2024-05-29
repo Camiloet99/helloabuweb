@@ -161,7 +161,7 @@ const ScheduleCall = () => {
                 Book an Instant Call
               </button>
               <span className="book-now-description">
-                Experts are going to call you ASAP! <br />
+                Experts are going to call you ASAP via WhatsApp! <br />
                 No need to register.
               </span>
               {!user?.fullName && (

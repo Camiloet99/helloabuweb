@@ -77,3 +77,18 @@ export const createBookingNoLogin = async (booking) => {
     throw error.response ? error.response.data : error;
   }
 };
+
+export const deleteBooking = async (bookingId) => {
+  const token = localStorage.getItem("authToken");
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  try {
+    const response = await axios.delete(`/bookings/${bookingId}`, config);
+    return response.data;
+  } catch (error) {
+    throw error.response ? error.response.data : error;
+  }
+};

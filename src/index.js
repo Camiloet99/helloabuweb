@@ -7,7 +7,7 @@ import { Provider } from "react-redux";
 import store from "./store/store";
 import setupAxiosInterceptors from "./axiosInterceptors";
 
-setupAxiosInterceptors();
+//setupAxiosInterceptors();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

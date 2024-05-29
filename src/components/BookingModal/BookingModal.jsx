@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import model from "../../assets/images/icons/profileexample.jpg";
-import { assignBooking } from "../../api/bookings/bookingsApi";
 import { getUserById } from "../../api/users/usersApi";
 import "./BookingModal.scss";
 
-const BookingModal = ({ booking, onClose, refresh }) => {
+const BookingModal = ({ booking, onClose }) => {
   const [userData, setUserData] = useState({});
 
   useEffect(() => {
@@ -30,9 +29,7 @@ const BookingModal = ({ booking, onClose, refresh }) => {
   };
 
   const handleTakeBooking = async () => {
-    await assignBooking(booking.bookingId);
-    refresh();
-    booking.bookingStatus = "PROGRESS"
+    booking.bookingStatus = "PROGRESS";
     switch (booking.selectedPlatform) {
       case "wpp":
         window.open(booking.link, "_blank");
@@ -87,13 +84,9 @@ const BookingModal = ({ booking, onClose, refresh }) => {
             {userData?.phoneNumber + " "}
           </li>
         </ul>
-        {booking.bookingStatus === "PENDING" && (
+        {booking.bookingStatus === "PROGRESS" && (
           <div className="call-group">
             <button onClick={handleTakeBooking}>Call this guy!</button>
-            <span>
-              *By calling this person this booking is going to be assigned to
-              you
-            </span>
           </div>
         )}
         <button onClick={onClose} className="close-option">
