@@ -219,9 +219,14 @@
     .submit-booking {
       display: flex;
       justify-content: center;
+      flex-direction: column;
       margin: 40px 100px;
       margin-bottom: 80px;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
       button {
+        width: 200px;
         background-color: $cambridge-green;
         font-size: 1.4rem;
         font-weight: 700;
@@ -233,6 +238,9 @@
         cursor: pointer;
         &:hover {
           background-color: $strong-green-button;
+        }
+        &:disabled{
+          background-color: $light-font-color;
         }
       }
     }

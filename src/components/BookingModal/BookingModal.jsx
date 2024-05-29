@@ -41,7 +41,10 @@ const BookingModal = ({ booking, onClose }) => {
         window.open(booking.link, "_blank");
         break;
       case "zoom":
-        window.location.href = booking.link;
+        window.open(booking.link, "_blank");
+        break;
+      case "teams":
+        window.open(booking.link, "_blank");
         break;
       case "phone":
         window.location.href = `tel:${userData.phoneNumber}`;
@@ -54,19 +57,19 @@ const BookingModal = ({ booking, onClose }) => {
   return (
     <div className="booking-modal">
       <div className="booking-modal-content">
-        <h2>Detalles del Booking</h2>
+        <h2>Booking details</h2>
         <div className="booking-person">
           <img src={model} alt="profile" />
         </div>
         <ul className="booking-modal-list">
           <li>
-            <span>ID de Reserva: </span>#{booking.bookingId}
+            <span>Booking ID: </span>#{booking.bookingId}
           </li>
           <li>
             <span>Name:</span> {booking.userName}
           </li>
           <li>
-            <span>Estado: </span>
+            <span>Status: </span>
             {booking.bookingStatus}
           </li>
           {booking?.takenBy && (
@@ -76,19 +79,25 @@ const BookingModal = ({ booking, onClose }) => {
             </li>
           )}
           <li>
-            <span>Fecha de Creación: </span>
+            <span>Request date: </span>
             {formatDate(booking.creationDate)}
           </li>
-          <li>
-            <span>Phone: </span>
-            {userData?.phoneNumber + " "}
-          </li>
+          {userData?.phoneNumber && (
+            <li>
+              <span>Phone: </span>
+              {userData?.phoneNumber}
+            </li>
+          )}
+          {booking?.profileInformation && (
+            <li>
+              <span>Platform profile: </span>
+              {booking?.profileInformation}
+            </li>
+          )}
         </ul>
-        {booking.bookingStatus === "PROGRESS" && (
-          <div className="call-group">
-            <button onClick={handleTakeBooking}>Call this guy!</button>
-          </div>
-        )}
+        <div className="call-group">
+          <button onClick={handleTakeBooking}>Contact</button>
+        </div>
         <button onClick={onClose} className="close-option">
           X
         </button>

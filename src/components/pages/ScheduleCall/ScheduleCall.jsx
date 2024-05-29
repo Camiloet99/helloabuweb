@@ -33,7 +33,7 @@ const ScheduleCall = () => {
   const { triggerToast } = useToast();
 
   useEffect(() => {
-    if (["zoom", "facebook", "google"].includes(selectedMethod)) {
+    if (["zoom", "facebook", "teams"].includes(selectedMethod)) {
       if (extraData.length > 0) {
         setValidData(false);
       } else {
@@ -64,17 +64,6 @@ const ScheduleCall = () => {
 
   const handleChangeMethod = (method) => {
     setSelectedMethod(method);
-    if (method === "zoom") {
-      setMethodLink(extraData);
-    } else if (method === "wpp") {
-      setMethodLink(`https://wa.me/${user?.phoneNumber?.replace("+", "")}`);
-    } else if (method === "phone") {
-      setMethodLink(`tel:${user?.phoneNumber?.replace("+", "")}`);
-    } else if (method === "teams") {
-      setMethodLink(extraData);
-    } else if (method === "facebook") {
-      setMethodLink(`facebook.com/${extraData}`);
-    }
   };
 
   const handleInstantCall = async (event) => {
@@ -86,6 +75,7 @@ const ScheduleCall = () => {
         selectedPlatform: "wpp",
         location: "To be defined",
         link: `https://wa.me/${user?.phoneNumber?.replace("+", "")}`,
+        profileInformation: extraData,
       };
       setIsLoading(true);
       await createBooking(booking);
@@ -116,6 +106,22 @@ const ScheduleCall = () => {
     }
   };
 
+  const getMethodLink = (method) => {
+    if (method === "zoom") {
+      return `https://app.zoom.us/wc?_ga=2.62161125.890562721.1717006713-1575544448.1717006713`;
+    } else if (method === "wpp") {
+      return `https://wa.me/${user?.phoneNumber?.replace("+", "")}`;
+    } else if (method === "phone") {
+      return `tel:${user?.phoneNumber?.replace("+", "")}`;
+    } else if (method === "teams") {
+      return extraData;
+    } else if (method === "facebook") {
+      return `https://facebook.com/${extraData}`;
+    } else {
+      return `https://wa.me/${user?.phoneNumber?.replace("+", "")}`;
+    }
+  };
+
   const handleBooking = async (event) => {
     event.preventDefault();
     if (user?.fullName) {
@@ -124,7 +130,8 @@ const ScheduleCall = () => {
         userName: user?.fullName,
         selectedPlatform: selectedMethod,
         location: "To be defined",
-        link: methodLink,
+        link: getMethodLink(selectedMethod),
+        profileInformation: extraData,
       };
       setIsLoading(true);
       await createBooking(booking);
@@ -298,6 +305,7 @@ const ScheduleCall = () => {
               <button type="submit" disabled={validData}>
                 Book Now
               </button>
+              {validData && <span>Please provide required information</span>}
             </div>
           </form>
         )}

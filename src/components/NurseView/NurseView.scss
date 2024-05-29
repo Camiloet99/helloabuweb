@@ -167,6 +167,7 @@
         background-color: $dark-green-title;
       }
       &.delete{
+        display: none;
         background-color: $soft-font-color;
         color: white;
         &:hover{

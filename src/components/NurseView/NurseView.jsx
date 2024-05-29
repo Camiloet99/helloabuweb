@@ -7,7 +7,8 @@ import location from "../../assets/images/icons/forms/location.svg";
 import messenger from "../../assets/images/icons/socialmedia/Messenger.svg";
 import whatsapp from "../../assets/images/icons/socialmedia/Whatsapp.svg";
 import google from "../../assets/images/icons/socialmedia/Messenger.svg";
-import zoom from "../../assets/images/icons/socialmedia/Messenger.svg";
+import zoom from "../../assets/images/icons/socialmedia/Zoom.svg";
+import teams from "../../assets/images/icons/socialmedia/Teams.svg";
 import phone from "../../assets/images/icons/forms/phone.svg";
 import { useSelector } from "react-redux";
 import { ThreeDots } from "react-loader-spinner";
@@ -86,6 +87,8 @@ const NurseView = () => {
         return phone;
       case "zoom":
         return zoom;
+      case "teams":
+        return teams;
       default:
         return phone;
     }
