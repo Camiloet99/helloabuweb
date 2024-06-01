@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/helloabuweb/static/css/main.dae10d77.css",
-    "main.js": "/helloabuweb/static/js/main.62ca8264.js",
+    "main.js": "/helloabuweb/static/js/main.6059e022.js",
     "static/js/453.81901364.chunk.js": "/helloabuweb/static/js/453.81901364.chunk.js",
     "static/media/doctor.png": "/helloabuweb/static/media/doctor.4b27e7a05ba45ba93b6d.png",
     "static/media/abu2.jpg": "/helloabuweb/static/media/abu2.fd46dd8802dc399bfe98.jpg",
@@ -39,11 +39,11 @@
     "static/media/Facebook.svg": "/helloabuweb/static/media/Facebook.f0c3863dec4850a8db17bff791f58926.svg",
     "static/media/getFetch.cjs": "/helloabuweb/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
     "main.dae10d77.css.map": "/helloabuweb/static/css/main.dae10d77.css.map",
-    "main.62ca8264.js.map": "/helloabuweb/static/js/main.62ca8264.js.map",
+    "main.6059e022.js.map": "/helloabuweb/static/js/main.6059e022.js.map",
     "453.81901364.chunk.js.map": "/helloabuweb/static/js/453.81901364.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dae10d77.css",
-    "static/js/main.62ca8264.js"
+    "static/js/main.6059e022.js"
   ]
 }
