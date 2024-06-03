@@ -1,6 +1,6 @@
 import axios from "axios";
 
-//const API_URL = "http://localhost:8080";
+const API_URL = "http://ec2-3-85-87-67.compute-1.amazonaws.com";
 
 export const getBookingsList = async () => {
   const token = localStorage.getItem("authToken");
@@ -11,7 +11,10 @@ export const getBookingsList = async () => {
     },
   };
   try {
-    const response = await axios.get(`/bookings/list`, config);
+    const response = await axios.get(
+      API_URL + `/bookings/list?active=true`,
+      config
+    );
     return response?.data?.result;
   } catch (error) {
     throw error.response ? error.response.data : error;
@@ -28,7 +31,7 @@ export const finishBooking = async (bookingId) => {
   };
   try {
     const response = await axios.put(
-      `/bookings/${bookingId}/finish`,
+      API_URL + `/bookings/${bookingId}/finish`,
       {},
       config
     );
@@ -47,7 +50,11 @@ export const assignBooking = async (bookingId) => {
     },
   };
   try {
-    const response = await axios.put(`/bookings/${bookingId}`, {}, config);
+    const response = await axios.put(
+      API_URL + `/bookings/${bookingId}`,
+      {},
+      config
+    );
     return response?.data?.result;
   } catch (error) {
     throw error.response ? error.response.data : error;
@@ -62,7 +69,7 @@ export const createBooking = async (booking) => {
     },
   };
   try {
-    const response = await axios.post(`/bookings`, booking, config);
+    const response = await axios.post(API_URL + `/bookings`, booking, config);
     return response.data;
   } catch (error) {
     throw error.response ? error.response.data : error;
@@ -71,7 +78,7 @@ export const createBooking = async (booking) => {
 
 export const createBookingNoLogin = async (booking) => {
   try {
-    const response = await axios.post(`/open/bookings`, booking, {});
+    const response = await axios.post(API_URL + `/open/bookings`, booking, {});
     return response.data;
   } catch (error) {
     throw error.response ? error.response.data : error;
@@ -86,7 +93,10 @@ export const deleteBooking = async (bookingId) => {
     },
   };
   try {
-    const response = await axios.delete(`/bookings/${bookingId}`, config);
+    const response = await axios.delete(
+      API_URL + `/bookings/${bookingId}`,
+      config
+    );
     return response.data;
   } catch (error) {
     throw error.response ? error.response.data : error;

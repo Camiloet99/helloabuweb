@@ -1,6 +1,6 @@
 import axios from "axios";
 
-//const API_URL = "http://localhost:8080";
+const API_URL = "http://ec2-3-85-87-67.compute-1.amazonaws.com";
 //const API_KEY = "tst";
 //TODO traer esto de las variables de entorno
 
@@ -12,7 +12,11 @@ export const registerUser = async (userData, navigate, errorStatus) => {
     },
   };
   try {
-    const response = await axios.post(`/auth/register`, userData, config);
+    const response = await axios.post(
+      API_URL + `/auth/register`,
+      userData,
+      config
+    );
     if (response?.data?.status === 201) {
       navigate();
       return response?.data;
@@ -33,7 +37,11 @@ export const login = async (loginRequest) => {
     },
   };
   try {
-    const response = await axios.post(`/auth/login`, loginRequest, config);
+    const response = await axios.post(
+      API_URL + `/auth/login`,
+      loginRequest,
+      config
+    );
     return response.data;
   } catch (error) {
     throw error.response ? error.response.data : error;
@@ -49,7 +57,7 @@ export const getUserById = async (userId) => {
     },
   };
   try {
-    const response = await axios.get(`/users/${userId}`, config);
+    const response = await axios.get(API_URL + `/users/${userId}`, config);
     return response.data;
   } catch (error) {
     throw error.response ? error.response.data : error;
