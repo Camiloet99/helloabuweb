@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import model from "../../assets/images/icons/profileexample.jpg";
 import { getUserById } from "../../api/users/usersApi";
+import { useTranslation } from "react-i18next";
 import "./BookingModal.scss";
 
 const BookingModal = ({ booking, onClose }) => {
   const [userData, setUserData] = useState({});
+  const { t } = useTranslation("common");
 
   useEffect(() => {
     const handleGetUserById = async () => {
@@ -57,46 +59,46 @@ const BookingModal = ({ booking, onClose }) => {
   return (
     <div className="booking-modal">
       <div className="booking-modal-content">
-        <h2>Booking details</h2>
+        <h2>{t("BookingModal.title")}</h2>
         <div className="booking-person">
           <img src={model} alt="profile" />
         </div>
         <ul className="booking-modal-list">
           <li>
-            <span>Booking ID: </span>#{booking.bookingId}
+            <span>{t("BookingModal.bookingId")}</span>#{booking.bookingId}
           </li>
           <li>
-            <span>Name:</span> {booking.userName}
+            <span>{t("BookingModal.name")}</span> {booking.userName}
           </li>
           <li>
-            <span>Status: </span>
+            <span>{t("BookingModal.status")}</span>
             {booking.bookingStatus}
           </li>
           {booking?.takenBy && (
             <li>
-              <span>Assignee: </span>
+              <span>{t("BookingModal.assignee")}</span>
               {booking?.takenBy}
             </li>
           )}
           <li>
-            <span>Request date: </span>
+            <span>{t("BookingModal.requestDate")}</span>
             {formatDate(booking.creationDate)}
           </li>
           {userData?.phoneNumber && (
             <li>
-              <span>Phone: </span>
+              <span>{t("BookingModal.phone")}</span>
               {userData?.phoneNumber}
             </li>
           )}
           {booking?.profileInformation && (
             <li>
-              <span>Platform profile: </span>
+              <span>{t("BookingModal.platform")}</span>
               {booking?.profileInformation}
             </li>
           )}
         </ul>
         <div className="call-group">
-          <button onClick={handleTakeBooking}>Contact</button>
+          <button onClick={handleTakeBooking}>{t("BookingModal.contact")}</button>
         </div>
         <button onClick={onClose} className="close-option">
           X

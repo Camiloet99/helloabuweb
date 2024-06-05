@@ -13,6 +13,7 @@ import { ThreeDots } from "react-loader-spinner";
 import { useSelector } from "react-redux";
 import { createBookingNoLogin } from "../../../api/bookings/bookingsApi";
 import { useToast } from "../../../context/ToastContext";
+import { useTranslation } from "react-i18next";
 import "react-datepicker/dist/react-datepicker.css";
 import "./ScheduleCall.scss";
 
@@ -24,6 +25,7 @@ const ScheduleCall = () => {
   const [phone, setPhone] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const user = useSelector((state) => state.user);
+  const { t } = useTranslation("common");
 
   const [selectedMethod, setSelectedMethod] = useState("");
   const [methodLink, setMethodLink] = useState("");
@@ -147,10 +149,10 @@ const ScheduleCall = () => {
 
   return (
     <div className="schedule-call">
-      <h2>Book Your Appointment</h2>
-      <p>
-        Schedule a one-to-one call to <span>recive help</span> now.
-      </p>
+      <h2>{t("ScheduleCall.title")}</h2>
+      <p dangerouslySetInnerHTML={{
+        __html: t("ScheduleCall.subtitle"),
+      }} />
       <div className="schedule-call-content">
         {isLoading ? (
           <ThreeDots
@@ -165,18 +167,17 @@ const ScheduleCall = () => {
           <form onSubmit={handleBooking}>
             <div className="instant-call">
               <button className="book-now" onClick={handleInstantCall}>
-                Book an Instant Call
+                {t("ScheduleCall.ctaInstantCall")}
               </button>
-              <span className="book-now-description">
-                Experts are going to call you ASAP via WhatsApp! <br />
-                No need to register.
-              </span>
+              <span className="book-now-description" dangerouslySetInnerHTML={{
+                __html: t("ScheduleCall.instantCallDescription"),
+              }} />
               {!user?.fullName && (
                 <div className="registration-form">
                   <div className="registration-input">
                     <div className="label-group">
                       <img src={nameIcon} alt="name-logo" />
-                      <label htmlFor="booking-reg-name">Name</label>
+                      <label htmlFor="booking-reg-name">{t("ScheduleCall.name")}</label>
                     </div>
                     <input
                       type="text"
@@ -189,7 +190,7 @@ const ScheduleCall = () => {
                   <div className="registration-input">
                     <div className="label-group">
                       <img src={emailIcon} alt="email-logo" />
-                      <label htmlFor="booking-reg-name">Email</label>
+                      <label htmlFor="booking-reg-name">{t("ScheduleCall.email")}</label>
                     </div>
                     <input
                       type="email"
@@ -202,7 +203,7 @@ const ScheduleCall = () => {
                   <div className="registration-input">
                     <div className="label-group">
                       <img src={phoneIcon} alt="email-logo" />
-                      <label htmlFor="booking-reg-name">Phone</label>
+                      <label htmlFor="booking-reg-name">{t("ScheduleCall.phone")}</label>
                     </div>
                     <input
                       type="tel"
@@ -216,7 +217,7 @@ const ScheduleCall = () => {
               )}
             </div>
             <div className="date-picker">
-              <label>Choose a Date</label>
+              <label>{t("ScheduleCall.chooseDate")}</label>
               <DatePicker
                 inline
                 selected={selectedDate}
@@ -224,15 +225,14 @@ const ScheduleCall = () => {
               />
             </div>
             <div className="time-selection">
-              <label>Pick a time</label>
+              <label>{t("ScheduleCall.pickTime")}</label>
               <div className="times-container">
                 {times.map((time) => (
                   <button
                     key={time}
                     type="button"
-                    className={`time-button ${
-                      selectedTime === time ? "selected" : ""
-                    }`}
+                    className={`time-button ${selectedTime === time ? "selected" : ""
+                      }`}
                     onClick={() => handleTimeClick(time)}
                   >
                     {time}
@@ -241,7 +241,7 @@ const ScheduleCall = () => {
               </div>
             </div>
             <div className="platform-selection">
-              <h4>Select a platform to receive the call</h4>
+              <h4>{t("ScheduleCall.selectPlatform")}</h4>
               <div className="options-container">
                 <div className="contact-option">
                   <img
@@ -290,22 +290,21 @@ const ScheduleCall = () => {
                     type="text"
                     value={extraData}
                     onChange={handleExtraData}
-                    placeholder={`Provide your ${
-                      selectedMethod === "zoom"
-                        ? "Zoom user ID"
-                        : selectedMethod === "teams"
+                    placeholder={`Provide your ${selectedMethod === "zoom"
+                      ? "Zoom user ID"
+                      : selectedMethod === "teams"
                         ? "Teams profile"
                         : "Facebook profile"
-                    }`}
+                      }`}
                   />
                 </div>
               )}
             </div>
             <div className="submit-booking">
               <button type="submit" disabled={validData}>
-                Book Now
+                {t("ScheduleCall.bookNowCta")}
               </button>
-              {validData && <span>Please provide required information</span>}
+              {validData && <span>{t("ScheduleCall.provideInfo")}</span>}
             </div>
           </form>
         )}

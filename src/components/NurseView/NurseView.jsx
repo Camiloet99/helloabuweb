@@ -17,6 +17,7 @@ import "./NurseView.scss";
 import { useToast } from "../../context/ToastContext";
 import ConfirmationModal from "../ConfirmationModal/ConfirmationModal";
 import { deleteBooking } from "../../api/bookings/bookingsApi";
+import { useTranslation } from "react-i18next";
 
 const itemsPerPage = 5;
 
@@ -28,6 +29,7 @@ const NurseView = () => {
   const user = useSelector((state) => state.user);
   const { triggerToast } = useToast();
   const [modalGrabBooking, setModalGrabBooking] = useState(null);
+  const { t } = useTranslation("common");
 
   const lastItemIndex = currentPage * itemsPerPage;
   const firstItemIndex = lastItemIndex - itemsPerPage;
@@ -45,7 +47,7 @@ const NurseView = () => {
     setSelectedBooking(booking);
     await assignBooking(booking.bookingId);
     await fetchUsersBookings();
-    triggerToast("Booking has been assigned to you successfully!");
+    triggerToast(t("NurseView.assignBookingAlert"));
   };
 
   const handleGrabConfirm = async () => {
@@ -135,18 +137,18 @@ const NurseView = () => {
   const handleFinishBooking = async (booking) => {
     await finishBooking(booking?.bookingId);
     fetchUsersBookings();
-    triggerToast("Booking has been finished successfully!");
+    triggerToast(t("NurseView.finishBookingAlert"));
   };
 
   const handleDeleteBooking = async (booking) => {
     await deleteBooking(booking?.bookingId);
     fetchUsersBookings();
-    triggerToast("Booking has been deleted successfully!");
+    triggerToast(t("NurseView.deleteBookingAlert"));
   };
 
   return (
     <div className="nurse-view">
-      <h1>Active bookings</h1>
+      <h1>{t("NurseView.title")}</h1>
       {isLoading ? (
         <div className="nurse-loader">
           <ThreeDots
@@ -163,13 +165,13 @@ const NurseView = () => {
           <table>
             <thead>
               <tr>
-                <th>Patient</th>
-                <th>ID</th>
-                <th>Date</th>
-                <th>Hour</th>
-                <th>Status</th>
-                <th>Platform</th>
-                <th>Action</th>
+                <th>{t("NurseView.patient")}</th>
+                <th>{t("NurseView.id")}</th>
+                <th>{t("NurseView.date")}</th>
+                <th>{t("NurseView.hour")}</th>
+                <th>{t("NurseView.status")}</th>
+                <th>{t("NurseView.platform")}</th>
+                <th>{t("NurseView.action")}</th>
               </tr>
             </thead>
             <tbody>
@@ -206,7 +208,7 @@ const NurseView = () => {
                           onClick={() => handleOpenGrabModal(booking)}
                           className="grab-booking-button"
                         >
-                          Grab Booking
+                          {t("NurseView.grabBooking")}
                         </button>
                       </>
                     ) : booking.bookingStatus === "PROGRESS" ? (
@@ -216,13 +218,13 @@ const NurseView = () => {
                           className="options-button"
                           disabled={!booking?.takenBy === user?.email}
                         >
-                          Finish
+                          {t("NurseView.finishBooking")}
                         </button>
                         <button
                           onClick={() => openDetailsModal(booking)}
                           className="options-button"
                         >
-                          Details
+                          {t("NurseView.details")}
                         </button>
                       </div>
                     ) : (
@@ -231,7 +233,7 @@ const NurseView = () => {
                         className="options-button delete"
                         disabled={!booking?.takenBy === user?.email}
                       >
-                        Delete
+                        {t("NurseView.details")}
                       </button>
                     )}
                   </td>
@@ -259,7 +261,7 @@ const NurseView = () => {
           )}
           {modalGrabBooking && (
             <ConfirmationModal
-              message="Are you sure you want to take this booking?"
+              message={t("NurseView.grabBookingAlert")}
               onConfirm={handleGrabConfirm}
               onCancel={handleGrabCancel}
             />

@@ -1,0 +1,49 @@
+{
+    "ScheduleCall": {
+        "title": "Book Your Appointment",
+        "subtitle": "Schedule a one-to-one call to <span>recive help</span> now.",
+        "ctaInstantCall": "Book an Instant Call",
+        "instantCallDescription": "Experts are going to call you ASAP via WhatsApp! <br />No need to register.",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "chooseDate": "Choose a Date",
+        "pickTime": "Pick a Time",
+        "selectPlatform": "Select a platform to receive the call",
+        "bookNowCta": "Book Now",
+        "provideInfo": "Please provide required information"
+    },
+    "BookingModal": {
+        "title": "Booking details",
+        "bookingId": "Booking ID: ",
+        "name": "Name: ",
+        "status": "Status: ",
+        "assignee": "Assignee: ",
+        "requestDate": "Request Date: ",
+        "phone": "Phone: ",
+        "platform": "Platform Profile: ",
+        "contact": "Contact"
+    },
+    "ConfirmationModal": {
+        "affirmative": "Yes",
+        "negative": "No"
+    },
+    "NurseView": {
+        "title": "Active bookings",
+        "patient": "Patient",
+        "id": "ID",
+        "date": "Date",
+        "hour": "Hour",
+        "status": "Status",
+        "platform": "Platform",
+        "action": "Action",
+        "grabBooking": "Grab Booking",
+        "finishBooking": "Finish",
+        "details": "Details",
+        "deleteBooking": "Delete",
+        "grabBookingAlert": "Are you sure you want to take this booking?",
+        "finishBookingAlert": "Booking has been finished successfully!",
+        "deleteBookingAlert": "Booking has been deleted successfully!",
+        "assignBookingAlert": "Booking has been assigned to you successfully!"
+    }
+}
