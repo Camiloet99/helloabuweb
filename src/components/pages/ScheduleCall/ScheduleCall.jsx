@@ -13,6 +13,7 @@ import { ThreeDots } from "react-loader-spinner";
 import { useSelector } from "react-redux";
 import { createBookingNoLogin } from "../../../api/bookings/bookingsApi";
 import { useToast } from "../../../context/ToastContext";
+import PhoneInput from "react-phone-number-input";
 import { useTranslation } from "react-i18next";
 import "react-datepicker/dist/react-datepicker.css";
 import "./ScheduleCall.scss";
@@ -83,7 +84,7 @@ const ScheduleCall = () => {
       await createBooking(booking);
       setTimeout(() => {
         setIsLoading(false);
-        navigate("/helloabuweb");
+        navigate("/");
         triggerToast("Booking was created successfully!!");
       }, 1000);
     } else {
@@ -99,7 +100,7 @@ const ScheduleCall = () => {
         await createBookingNoLogin(booking);
         setTimeout(() => {
           setIsLoading(false);
-          navigate("/helloabuweb");
+          navigate("/");
           triggerToast("Booking was created successfully!!");
         }, 1000);
       } else {
@@ -139,20 +140,22 @@ const ScheduleCall = () => {
       await createBooking(booking);
       setTimeout(() => {
         setIsLoading(false);
-        navigate("/helloabuweb");
+        navigate("/");
         triggerToast("Booking was created successfully!!");
       }, 1000);
     } else {
-      navigate("/helloabuweb/login");
+      navigate("/login");
     }
   };
 
   return (
     <div className="schedule-call">
       <h2>{t("ScheduleCall.title")}</h2>
-      <p dangerouslySetInnerHTML={{
-        __html: t("ScheduleCall.subtitle"),
-      }} />
+      <p
+        dangerouslySetInnerHTML={{
+          __html: t("ScheduleCall.subtitle"),
+        }}
+      />
       <div className="schedule-call-content">
         {isLoading ? (
           <ThreeDots
@@ -169,15 +172,20 @@ const ScheduleCall = () => {
               <button className="book-now" onClick={handleInstantCall}>
                 {t("ScheduleCall.ctaInstantCall")}
               </button>
-              <span className="book-now-description" dangerouslySetInnerHTML={{
-                __html: t("ScheduleCall.instantCallDescription"),
-              }} />
+              <span
+                className="book-now-description"
+                dangerouslySetInnerHTML={{
+                  __html: t("ScheduleCall.instantCallDescription"),
+                }}
+              />
               {!user?.fullName && (
                 <div className="registration-form">
                   <div className="registration-input">
                     <div className="label-group">
                       <img src={nameIcon} alt="name-logo" />
-                      <label htmlFor="booking-reg-name">{t("ScheduleCall.name")}</label>
+                      <label htmlFor="booking-reg-name">
+                        {t("ScheduleCall.name")}
+                      </label>
                     </div>
                     <input
                       type="text"
@@ -190,7 +198,9 @@ const ScheduleCall = () => {
                   <div className="registration-input">
                     <div className="label-group">
                       <img src={emailIcon} alt="email-logo" />
-                      <label htmlFor="booking-reg-name">{t("ScheduleCall.email")}</label>
+                      <label htmlFor="booking-reg-name">
+                        {t("ScheduleCall.email")}
+                      </label>
                     </div>
                     <input
                       type="email"
@@ -203,20 +213,22 @@ const ScheduleCall = () => {
                   <div className="registration-input">
                     <div className="label-group">
                       <img src={phoneIcon} alt="email-logo" />
-                      <label htmlFor="booking-reg-name">{t("ScheduleCall.phone")}</label>
+                      <label htmlFor="booking-reg-name">
+                        {t("ScheduleCall.phone")}
+                      </label>
                     </div>
-                    <input
-                      type="tel"
-                      placeholder="Phone Number"
+                    <PhoneInput
+                      international
+                      defaultCountry="US"
                       value={phone}
-                      id="booking-reg-phone"
-                      onChange={(e) => setPhone(e.target.value)}
+                      placeholder="Enter Your Phone Number"
+                      onChange={setPhone}
                     />
                   </div>
                 </div>
               )}
             </div>
-            <div className="date-picker">
+            <div className="date-picker --hidden">
               <label>{t("ScheduleCall.chooseDate")}</label>
               <DatePicker
                 inline
@@ -231,8 +243,9 @@ const ScheduleCall = () => {
                   <button
                     key={time}
                     type="button"
-                    className={`time-button ${selectedTime === time ? "selected" : ""
-                      }`}
+                    className={`time-button ${
+                      selectedTime === time ? "selected" : ""
+                    }`}
                     onClick={() => handleTimeClick(time)}
                   >
                     {time}
@@ -259,7 +272,7 @@ const ScheduleCall = () => {
                     className={selectedMethod === "wpp" ? "selected" : ""}
                   />
                 </div>
-                <div className="contact-option">
+                {/** <div className="contact-option">
                   <img
                     src={zoomIcon}
                     alt="Zoom"
@@ -282,7 +295,7 @@ const ScheduleCall = () => {
                     onClick={() => handleChangeMethod("teams")}
                     className={selectedMethod === "teams" ? "selected" : ""}
                   />
-                </div>
+                </div>*/}
               </div>
               {isInputRequired() && (
                 <div className="extra-data">
@@ -290,12 +303,13 @@ const ScheduleCall = () => {
                     type="text"
                     value={extraData}
                     onChange={handleExtraData}
-                    placeholder={`Provide your ${selectedMethod === "zoom"
-                      ? "Zoom user ID"
-                      : selectedMethod === "teams"
+                    placeholder={`Provide your ${
+                      selectedMethod === "zoom"
+                        ? "Zoom user ID"
+                        : selectedMethod === "teams"
                         ? "Teams profile"
                         : "Facebook profile"
-                      }`}
+                    }`}
                   />
                 </div>
               )}

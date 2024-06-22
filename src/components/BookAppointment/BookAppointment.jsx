@@ -34,7 +34,7 @@ const BookAppointment = () => {
             placeholder={t("BookAppointment.ContactPlaceholder")}
           />
         </div>
-        <div className="input-content">
+        <div className="input-content mobile-hidden">
           <div className="label-content">
             <img src={calendar} alt="email logo" />
             <label htmlFor="date">{t("BookAppointment.DateLabel")}</label>

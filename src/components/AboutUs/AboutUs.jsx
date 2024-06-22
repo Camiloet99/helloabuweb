@@ -16,7 +16,6 @@ function AboutUs() {
           </div>
           <div className="about-us-section-content-text">
             <p>{t("AboutUs.Description")}</p>
-            <button>{t("AboutUs.LearnMoreButton")}</button>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://ec2-3-85-87-67.compute-1.amazonaws.com";
+const API_URL = "https://api.helloabu.com";
 
 export const getBookingsList = async () => {
   const token = localStorage.getItem("authToken");

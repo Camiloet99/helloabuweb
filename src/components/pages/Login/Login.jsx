@@ -50,7 +50,7 @@ const Login = () => {
 
     try {
       await dispatch(
-        loginUser(userData, navigate("/helloabuweb"), setErrorLogin)
+        loginUser(userData, navigate("/"), setErrorLogin)
       );
     } catch (error) {
       console.error("Login failed:", error);
@@ -134,7 +134,7 @@ const Login = () => {
         </div>
         <p className="signup-question">
           {t("DontHaveAccount")}{" "}
-          <Link to={"/helloabuweb/signup"}>{t("SignUp")}</Link>
+          <Link to={"/signup"}>{t("SignUp")}</Link>
         </p>
       </div>
 

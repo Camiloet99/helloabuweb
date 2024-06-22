@@ -9,7 +9,7 @@ const WelcomeSection = () => {
   const navigate = useNavigate();
 
   const handleOpenModal = () => {
-    navigate("/helloabuweb/schedule");
+    navigate("/schedule");
   };
 
   return (

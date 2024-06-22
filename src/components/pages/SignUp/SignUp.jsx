@@ -54,7 +54,7 @@ const SignUp = () => {
     userData.phoneNumber = countryCode;
     await registerUser(
       userData,
-      () => navigate("/helloabuweb/login"),
+      () => navigate("/login"),
       setSignupError
     );
     setIsLoading(false);
@@ -182,7 +182,7 @@ const SignUp = () => {
           </button>
         </div>
         <p className="login-question">
-          {t("HaveAccount")} <Link to="/helloabuweb/login">{t("Login")}</Link>
+          {t("HaveAccount")} <Link to="/login">{t("Login")}</Link>
         </p>
       </div>
       <ReachSupport />

@@ -2,6 +2,7 @@
 
 .schedule-call {
   font-family: "Manrope", sans-serif;
+
   h2 {
     margin-top: 100px;
     font-size: $h1-title-size;
@@ -85,7 +86,7 @@
       }
     }
     .date-picker {
-      display: flex;
+      display: none; //replace to flex
       flex-direction: column;
       width: auto;
       margin: 0 100px;
@@ -158,7 +159,7 @@
         color: $neutral-font-color;
       }
       margin: 30px 100px;
-      display: flex;
+      display: none; //replace to flex
       flex-wrap: wrap;
       justify-content: space-between;
       .times-container {
@@ -192,15 +193,16 @@
       }
     }
     .platform-selection {
-      margin: 30px 100px;
+      text-align: center;
+      width: 100%;
       label {
         font-weight: 600;
         color: $neutral-font-color;
       }
       .options-container {
+        margin: 40px 0;
         display: flex;
-        justify-content: space-around;
-        margin: 40px auto;
+        justify-content: space-evenly;
         img {
           width: 50px;
           height: 50px;
@@ -239,10 +241,27 @@
         &:hover {
           background-color: $strong-green-button;
         }
-        &:disabled{
+        &:disabled {
           background-color: $light-font-color;
         }
       }
     }
   }
+}
+
+
+@include respond-to(lg) {
+  .schedule-call {
+    .schedule-call-content{
+      width: 90%;
+      .instant-call{
+        margin: 0;
+        margin-top: 50px;
+      }
+      .submit-booking{
+        margin: 40px auto;
+      }
+    }
+  }
+
 }

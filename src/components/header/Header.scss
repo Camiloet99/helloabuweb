@@ -13,14 +13,17 @@
     padding: 45px 95px;
     max-width: $max-screen-width;
     margin: 0 auto;
-    .login-buttons{
+    .login-buttons {
       display: flex;
       gap: 10px;
+    }
+    .mobile-menu-button {
+      display: none;
     }
     .user-dropdown {
       color: $neutral-font-color;
       cursor: pointer;
-      .user-name{
+      .user-name {
         position: relative;
       }
       &:hover .dropdown-content {
@@ -58,7 +61,7 @@
           font-weight: bold;
           font-size: 1rem;
           color: $cambridge-green;
-          &:hover{
+          &:hover {
             color: $tea-green;
           }
         }
@@ -71,16 +74,23 @@
     cursor: pointer;
   }
 
-  .header-navigation a {
+  .header-navigation {
     margin: 0 30px;
-    text-decoration: none;
-    color: $neutral-font-color;
-    transition: 0.2s all;
-    &:hover {
-      color: $cambridge-green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    a {
+      text-align: center;
+      text-decoration: none;
+      color: $neutral-font-color;
+      transition: 0.2s all;
+      &:hover {
+        color: $cambridge-green;
+      }
     }
   }
-  .join-us{
+  .join-us {
     background-color: white;
     border: 2px solid $strong-green-button;
     color: $strong-green-button;
@@ -113,10 +123,13 @@
 
 @include respond-to(lg) {
   .header {
+    position: relative;
+    z-index: 100;
     .header-container {
       padding: 10px;
-      .login-buttons{
-        button{
+      .login-buttons {
+        display: none;
+        button {
           padding: 8px;
           font-size: 1rem;
           font-weight: bold;
@@ -130,6 +143,39 @@
     }
     .header-navigation {
       display: none;
+    }
+    .mobile-menu-button {
+      width: 40px;
+      cursor: pointer;
+      height: 40px;
+      font-size: 1.5rem;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      margin-right: 5px;
+    }
+    .mobile-menu {
+      position: absolute;
+      bottom: -250px;
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      right: 0;
+      width: 100%;
+      z-index: -1;
+      background-color: $soft-green;
+      a {
+        margin: 0px 40px;
+        text-decoration: none;
+        color: $neutral-font-color;
+      }
+      a:first-child {
+        margin-top: 30px;
+      }
+
+      a:last-child {
+        margin-bottom: 30px;
+      }
     }
   }
 }

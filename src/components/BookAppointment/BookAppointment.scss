@@ -90,6 +90,9 @@
       .input-content {
         justify-content: center;
         align-items: center;
+        &.mobile-hidden {
+          display: none;
+        }
         input {
           margin-bottom: 16px;
           width: 100%;

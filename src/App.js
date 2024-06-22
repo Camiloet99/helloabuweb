@@ -21,10 +21,10 @@ function App() {
         <ScrollToTop />
         <Header />
         <Routes>
-          <Route path="/helloabuweb" exact element={<Home />} />
-          <Route path="/helloabuweb/signup" element={<SignUp />} />
-          <Route path="/helloabuweb/login" element={<Login />} />
-          <Route path="/helloabuweb/schedule" element={<ScheduleCall />} />
+          <Route path="/" exact element={<Home />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/schedule" element={<ScheduleCall />} />
         </Routes>
         <Footer />
       </Router>
